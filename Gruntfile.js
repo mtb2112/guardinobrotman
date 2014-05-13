@@ -93,7 +93,7 @@ module.exports = function( grunt ) {
 			
 			less: {
 				files: ['assets/css/less/*.less'],
-				tasks: ['less', 'cssmin'],
+				tasks: ['less'],
 				options: {
 					debounceDelay: 500
 				}
@@ -111,7 +111,7 @@ module.exports = function( grunt ) {
 
 	// Default task.
 	
-	grunt.registerTask( 'default', ['jshint', 'concat', 'uglify', 'less', 'cssmin'] );
+	grunt.registerTask( 'default', ['watch'] );
 	
 
 	grunt.util.linefeed = '\n';
