@@ -2,7 +2,7 @@ module.exports = function( grunt ) {
 	'use strict';
 
 	var pathCSS = 'assets/css/' ,
-		pathLESS = pathCSS + 'less/';
+		pathLESS = 'assets/less/';
 
 	// Load all grunt tasks
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
@@ -86,19 +86,37 @@ module.exports = function( grunt ) {
 		},
 
 		less: {
-			files: [pathLESS + '*.less'],
-			tasks: ['less'],
-			options: {
-				debounceDelay: 500
+			dev: {
+				options: {
+					path: pathLESS,
+					cleancss: true
+				},
+				files: {
+					'style.css' : 'assets/less/style.less'
+				}
+			},
+			prod: {
+				options: {
+					path: pathLESS,
+					compress: true,
+					cleancss: true
+				}
 			}
-		}
+		},
 
 		watch:  {
-			scripts: {
-				files: ['assets/js/src/**/*.js', 'assets/js/vendor/**/*.js'],
-				tasks: ['jshint', 'concat', 'uglify'],
+			dev: {
+				files: pathLESS + '*',
 				options: {
-					debounceDelay: 500
+					reload: true,
+					livereload: true
+				},
+				tasks: [ 'less:dev' ]
+			},
+			configFiles: {
+				files: ['Gruntfile.js'],
+				options: {
+					reload: true
 				}
 			}
 		},
@@ -119,7 +137,7 @@ module.exports = function( grunt ) {
 
 	// Default task.
 	
-	grunt.registerTask( 'default', ['watch'] );
+	grunt.registerTask( 'default', ['watch:dev'] );
 	
 
 	grunt.util.linefeed = '\n';
