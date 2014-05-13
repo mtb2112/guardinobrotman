@@ -6,6 +6,7 @@ module.exports = function( grunt ) {
 
 	// Load all grunt tasks
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+	grunt.loadNpmTasks('grunt-bowercopy');
 
 	// Project configuration
 	grunt.initConfig( {
@@ -109,7 +110,18 @@ module.exports = function( grunt ) {
 					debounceDelay: 500
 				}
 			}
-		}
+		},
+
+		bowercopy: {
+	        options: {
+	            destPrefix: pathLESS
+	        },
+	        files: {
+	            src: [ 'semantic-grid/stylesheets/less/grid.less', 
+	            	'normalize-less/normalize.less', 
+	            	'less-mixins/mixins.less' ]
+	        }
+	    }
 	} );
 
 	// Default task.

@@ -16,5 +16,10 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "semantic-grid": "*",
+    "normalize-less": "*",
+    "less-mixins": "~0.2.0"
+  }
 }
