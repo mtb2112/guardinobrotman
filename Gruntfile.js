@@ -109,7 +109,7 @@ module.exports = function( grunt ) {
 				files: pathLESS + '*',
 				options: {
 					reload: true,
-					livereload: true
+					livereload: false
 				},
 				tasks: [ 'less:dev' ]
 			},
