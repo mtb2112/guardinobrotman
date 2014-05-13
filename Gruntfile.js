@@ -6,7 +6,6 @@ module.exports = function( grunt ) {
 
 	// Load all grunt tasks
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
-	grunt.loadNpmTasks('grunt-bowercopy');
 
 	// Project configuration
 	grunt.initConfig( {
@@ -93,16 +92,16 @@ module.exports = function( grunt ) {
 				ext: '.min.css'
 			}
 		},
+
+		less: {
+			files: [pathLESS + '*.less'],
+			tasks: ['less'],
+			options: {
+				debounceDelay: 500
+			}
+		}
+
 		watch:  {
-			
-			less: {
-				files: ['assets/css/less/*.less'],
-				tasks: ['less'],
-				options: {
-					debounceDelay: 500
-				}
-			},
-			
 			scripts: {
 				files: ['assets/js/src/**/*.js', 'assets/js/vendor/**/*.js'],
 				tasks: ['jshint', 'concat', 'uglify'],
