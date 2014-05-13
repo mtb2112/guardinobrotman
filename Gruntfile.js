@@ -66,14 +66,6 @@ module.exports = function( grunt ) {
 			files: ['assets/js/test/**/*.js']
 		},
 		
-		less:   {
-			all: {
-				files: {
-					'assets/css/guardino_brotman_wedding.css': 'assets/css/less/guardino_brotman_wedding.less'
-				}
-			}
-		},
-		
 		cssmin: {
 			options: {
 				banner: '/*! <%= pkg.title %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +
