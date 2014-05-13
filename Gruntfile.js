@@ -117,9 +117,11 @@ module.exports = function( grunt ) {
 	            destPrefix: pathLESS
 	        },
 	        files: {
-	            src: [ 'semantic-grid/stylesheets/less/grid.less', 
+	            src: [ 
+	            	'semantic-grid/stylesheets/less/grid.less', 
 	            	'normalize-less/normalize.less', 
-	            	'less-mixins/mixins.less' ]
+	            	'less-mixins/mixins.less' 
+	            	]
 	        }
 	    }
 	} );
