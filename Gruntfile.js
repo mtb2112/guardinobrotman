@@ -1,6 +1,9 @@
 module.exports = function( grunt ) {
 	'use strict';
 
+	var pathCSS = 'assets/css/' ,
+		pathLESS = pathCSS + 'less/';
+
 	// Load all grunt tasks
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
