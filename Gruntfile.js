@@ -132,12 +132,51 @@ module.exports = function( grunt ) {
 	            	'less-mixins/mixins.less' 
 	            	]
 	        }
+	    },
+
+	    // SVG Task
+	    clean: ['images/src/svgs-compressed', 'images/src/svgs-output'], //removes old data
+
+	    svgmin: { //minimize SVG files
+	    	options: {
+	    		plugins: [
+		    		{ removeViewBox: false },
+		    		{ removeUselessStrokeAndFill: false }
+	    		]
+	    	},
+	    	dist: {
+	    		expand: true,
+	    		cwd: 'images/src/svgs',
+	    		src: ['*.svg'],
+	    		dest: 'images/src/svgs-compressed',
+	    		ext: '.colors-light-danger-success.svg'
+	    	}
+	    },
+
+	    grunticon: { 
+	    	myIcons: {
+	    		files: [{
+	    			expand: true,
+	    			cwd: 'images/src/svgs-compressed',
+	    			src: ['*.svg'],
+	    			dest: 'images/src/svgs-output'
+	    		}],
+	    		options: {
+	    			cssprefix: '.icon-',
+	    			colors: {
+	    				light: '#ccc',
+	    				danger: '#ed3921',
+	    				success: '#8dc63f'
+	    			}
+	    		}
+	    	}
 	    }
 	} );
 
 	// Default task.
 	
 	grunt.registerTask( 'default', ['watch:dev'] );
+	grunt.registerTask('icons', ['clean', 'svgmin', 'grunticon']);
 	
 
 	grunt.util.linefeed = '\n';
