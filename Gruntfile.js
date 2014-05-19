@@ -92,7 +92,7 @@ module.exports = function( grunt ) {
 					cleancss: true
 				},
 				files: {
-					'style.css' : 'assets/less/style.less'
+					'style.css' : 'assets/css/less/style.less'
 				}
 			},
 			prod: {
