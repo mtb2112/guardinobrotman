@@ -13,4 +13,33 @@ Template: just-married-parent
 @import 'semantic-grid/stylesheets/less/_grid';
 @import 'variables/_variables';
 
-li a { color: @brand-primary; }
+.head_names {
+	color: @heading-color;
+	font-family: @header-font;
+
+	&_left,
+	&_right {
+		position: relative;
+		display: inline-block;
+	}
+
+	&_first {
+		font-size: 40px;
+	}
+
+	&_last {
+		font-family: @sub-heading-font;
+		position: absolute;
+	}
+}
+
+.menu-menu-container {
+	background-color: @menu-bg-color;
+
+	.menu-item {
+		list-style: none;
+		display: inline-block;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+}

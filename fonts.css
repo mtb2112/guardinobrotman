@@ -1,11 +1,11 @@
 /* Lavanderia - Sturdy */
 @font-face {
 	font-family: 'lavanderia';
-	src: url('../fonts/lavanderia_sturdy-webfont.eot');
-	src: url('../fonts/lavanderia_sturdy-webfont.eot?#iefix') format('embedded-opentype'),
-		 url('../fonts/lavanderia_sturdy-webfont.woff') format('woff'),
-		 url('../fonts/lavanderia_sturdy-webfont.ttf') format('truetype'),
-		 url('../fonts/lavanderia_sturdy-webfont.svg#lavanderia_sturdy-webfont') format('svg');
+	src: url('assets/fonts/lavanderia_sturdy-webfont.eot');
+	src: url('assets/fonts/lavanderia_sturdy-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('assets/fonts/lavanderia_sturdy-webfont.woff') format('woff'),
+		 url('assets/fonts/lavanderia_sturdy-webfont.ttf') format('truetype'),
+		 url('assets/fonts/lavanderia_sturdy-webfont.svg#lavanderia_sturdy-webfont') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -13,11 +13,11 @@
 /* Haymaker - Regular */
 @font-face {
 	font-family: 'haymaker';
-	src: url('../fonts/haymaker-webfont.eot');
-	src: url('../fonts/haymaker-webfont.eot?#iefix') format('embedded-opentype'),
-		 url('../fonts/haymaker-webfont.woff') format('woff'),
-		 url('../fonts/haymaker-webfont.ttf') format('truetype'),
-		 url('../fonts/haymaker-webfont.svg#haymaker-webfont') format('svg');
+	src: url('assets/fonts/haymaker-webfont.eot');
+	src: url('assets/fonts/haymaker-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('assets/fonts/haymaker-webfont.woff') format('woff'),
+		 url('assets/fonts/haymaker-webfont.ttf') format('truetype'),
+		 url('assets/fonts/haymaker-webfont.svg#haymaker-webfont') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -25,11 +25,11 @@
 /* Abraham Lincoln - Regular */
 @font-face {
 	font-family: 'lincoln';
-	src: url('../fonts/abrahamlincoln-webfont.eot');
-	src: url('../fonts/abrahamlincoln-webfont.eot?#iefix') format('embedded-opentype'),
-		 url('../fonts/abrahamlincoln-webfont.woff') format('woff'),
-		 url('../fonts/abrahamlincoln-webfont.ttf') format('truetype'),
-		 url('../fonts/abrahamlincoln-webfont.svg#abrahamlincoln-webfont') format('svg');
+	src: url('assets/fonts/abrahamlincoln-webfont.eot');
+	src: url('assets/fonts/abrahamlincoln-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('assets/fonts/abrahamlincoln-webfont.woff') format('woff'),
+		 url('assets/fonts/abrahamlincoln-webfont.ttf') format('truetype'),
+		 url('assets/fonts/abrahamlincoln-webfont.svg#abrahamlincoln-webfont') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }

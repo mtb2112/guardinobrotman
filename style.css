@@ -189,6 +189,28 @@ body:after {
 body:after {
   clear: both;
 }
-li a {
-  color: #428bca;
+.head_names {
+  color: #3e3022;
+  font-family: lavanderia;
+}
+.head_names_left,
+.head_names_right {
+  position: relative;
+  display: inline-block;
+}
+.head_names_first {
+  font-size: 40px;
+}
+.head_names_last {
+  font-family: haymaker;
+  position: absolute;
+}
+.menu-menu-container {
+  background-color: #c6d1cb;
+}
+.menu-menu-container .menu-item {
+  list-style: none;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
 }
