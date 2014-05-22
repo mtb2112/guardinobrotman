@@ -1,7 +1,7 @@
 module.exports = function( grunt ) {
 	'use strict';
 
-	var pathCSS = 'assets/css/' ,
+	var pathCSS = '/' ,
 		pathLESS = 'assets/less/';
 
 	// Load all grunt tasks
@@ -92,7 +92,7 @@ module.exports = function( grunt ) {
 					cleancss: true
 				},
 				files: {
-					'style.css' : 'assets/css/less/style.less'
+					'style.css' : 'assets/less/style.less'
 				}
 			},
 			prod: {
