@@ -7,7 +7,6 @@
 
 @body-text-color:			#d7dfd2;
 @links:						#da6055;
-@links-hover:				darken(@links, 15%);
 
 @input-bg:					#d7dfd2;
 
@@ -15,3 +14,28 @@
 @header-font:				lavanderia;
 @sub-heading-font:			haymaker;
 @menu-font:                 metaserif;
+
+@base-font-size:            12;
+@base-size-h1:              floor(@base-font-size * 7.5); //90px
+@base-size-h2:              floor(@base-font-size * 3); //36px
+@base-size-h3:              floor(@base-font-size * 1.6667); //20px
+@base-size-h4:              floor(@base-font-size * 1.8333); //22px
+@base-size-h5:              floor(@base-font-size * 1.5); //18px
+@base-size-sm:              floor(@base-font-size * 1.3333); //16px
+@base-size-sm1:             floor(@base-font-size * 1.1667); //14px
+
+ .push( @offset: 1 ) {
+ margin-left: @total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width) + @total-width*((@gutter-width*.5)/@gridsystem-width);
+}
+
+.pull( @offset: 1 ) {
+ margin-right: @total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width) + @total-width*((@gutter-width*.5)/@gridsystem-width);
+}
+
+.prefix(@offset: 1 ) {
+ padding-left: @total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width) + @total-width*((@gutter-width*.5)/@gridsystem-width);
+}
+
+.suffix(@offset: 1 ) {
+ padding-right: @total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width) + @total-width*((@gutter-width*.5)/@gridsystem-width);
+}

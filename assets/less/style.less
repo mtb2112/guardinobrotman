@@ -20,6 +20,8 @@ body {
 .head_names {
 	color: @heading-color;
 	font-family: @header-font;
+	.font-size(@base-size-h1);
+	text-shadow: -1px -1px 1px fadeout(@black, 10%);
 
 	&_left,
 	&_right {
@@ -27,13 +29,27 @@ body {
 		display: inline-block;
 	}
 
+	&_left {
+		.head_names_last {
+			right: 31px;
+		}
+	}
+
+	&_right {
+		.head_names_last {
+			right: 22px;
+		}
+	}
+
 	&_first {
-		font-size: 40px;
+		
 	}
 
 	&_last {
 		font-family: @sub-heading-font;
 		position: absolute;
+		.font-size(@base-size-h3);
+		bottom: 37px;
 	}
 }
 
@@ -46,6 +62,8 @@ body {
 .menu-menu-container {
 	padding: 3px 0;
 	.bordered();
+	.push(.5);
+	.pull(.5);
 }
 
 .menu-item {
@@ -54,10 +72,14 @@ body {
 		text-transform: uppercase;
 		text-decoration: none;
 		font-family: @menu-font;
-		padding: 10px 22px;
+		padding: 10px 19px;
 
 		a {
 			text-decoration: none;
 			color: @menu-link-color;
 		}
 	}
+
+.main_outer {
+	.row(10);
+}

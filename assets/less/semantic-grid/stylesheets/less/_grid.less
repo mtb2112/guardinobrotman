@@ -3,8 +3,8 @@
 /////////////////
 
 // Defaults which you can freely override
-@column-width: 60;
-@gutter-width: 20;
+@column-width: 57;
+@gutter-width: 0;
 @columns: 12;
 
 // Utility variable — you should never need to modify this
@@ -44,7 +44,7 @@ body {
 .row(@columns:@columns) {
 	display: block;
 	width: @total-width*((@gutter-width + @gridsystem-width)/@gridsystem-width);
-	margin: 0 @total-width*(((@gutter-width*.5)/@gridsystem-width)*-1);
+	margin: 0 auto;
 	// *width: @total-width*((@gutter-width + @gridsystem-width)/@gridsystem-width)-@correction;
 	// *margin: 0 @total-width*(((@gutter-width*.5)/@gridsystem-width)*-1)-@correction;
 	.clearfix;

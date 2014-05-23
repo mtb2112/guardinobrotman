@@ -2,3 +2,9 @@
   border-top: dashed @border-width @top-color;
   border-bottom: dashed @border-width @bottom-color;
 }
+
+.font-size( @font-size: 16 ) {
+ @rem: ( @font-size / 10 );
+ font-size : ~"@{rem}rem";
+ font-size : @font-size * 1px;
+}
