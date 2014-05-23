@@ -13,6 +13,10 @@ Template: just-married-parent
 @import 'semantic-grid/stylesheets/less/_grid';
 @import 'variables/_variables';
 
+body {
+	font-family: @font-base;
+}
+
 .head_names {
 	color: @heading-color;
 	font-family: @header-font;
@@ -33,13 +37,27 @@ Template: just-married-parent
 	}
 }
 
-.menu-menu-container {
+#menu-menu {
+	padding: 0;
+	margin: 0;
 	background-color: @menu-bg-color;
+}
 
-	.menu-item {
+.menu-menu-container {
+	padding: 3px 0;
+	.bordered();
+}
+
+.menu-item {
 		list-style: none;
 		display: inline-block;
 		text-transform: uppercase;
 		text-decoration: none;
+		font-family: @menu-font;
+		padding: 10px 22px;
+
+		a {
+			text-decoration: none;
+			color: @menu-link-color;
+		}
 	}
-}

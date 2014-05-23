@@ -189,6 +189,9 @@ body:after {
 body:after {
   clear: both;
 }
+body {
+  font-family: Verdana, Arial, sans-serif;
+}
 .head_names {
   color: #3e3022;
   font-family: lavanderia;
@@ -205,12 +208,25 @@ body:after {
   font-family: haymaker;
   position: absolute;
 }
-.menu-menu-container {
+#menu-menu {
+  padding: 0;
+  margin: 0;
   background-color: #c6d1cb;
 }
-.menu-menu-container .menu-item {
+.menu-menu-container {
+  padding: 3px 0;
+  border-top: dashed 1px #000000;
+  border-bottom: dashed 1px #000000;
+}
+.menu-item {
   list-style: none;
   display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
+  font-family: metaserif;
+  padding: 10px 22px;
+}
+.menu-item a {
+  text-decoration: none;
+  color: #1b141b;
 }

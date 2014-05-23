@@ -33,3 +33,27 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
+/* Metaserif-Book */
+@font-face {
+	font-family: 'metaserif';
+	src: url('assets/fonts/metaseriflf-book-webfont.eot');
+	src: url('assets/fonts/metaseriflf-book-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('assets/fonts/metaseriflf-book-webfont.woff') format('woff'),
+		 url('assets/fonts/metaseriflf-book-webfont.ttf') format('truetype'),
+		 url('assets/fonts/metaseriflf-book-webfont.svg#metaseriflf-book-webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* STIXGeneral-Bold */
+@font-face {
+	font-family: 'stixgeneral';
+	src: url('assets/fonts/stixgeneralbol-webfont.eot');
+	src: url('assets/fonts/stixgeneralbol-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('assets/fonts/stixgeneralbol-webfont.woff') format('woff'),
+		 url('assets/fonts/stixgeneralbol-webfont.ttf') format('truetype'),
+		 url('assets/fonts/stixgeneralbol-webfont.svg#stixgeneralbol-webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

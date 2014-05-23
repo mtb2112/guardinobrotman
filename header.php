@@ -45,7 +45,7 @@
                 <!-- header -->
                 <div class="header">
                     <div class="head_title">
-                        <h1><?php echo tfuse_options('header_title'); ?></h1>
+                        <h1 class="icon-invited-banner"><?php echo tfuse_options('header_title'); ?></h1>
                         <p class="sub_title"><?php echo tfuse_options('header_subtitle'); ?></p>
                     </div>
                     <div class="head_names">

@@ -162,21 +162,27 @@ module.exports = function( grunt ) {
 	    			dest: 'images/src/svgs-output'
 	    		}],
 	    		options: {
-	    			cssprefix: '.icon-',
-	    			colors: {
-	    				light: '#ccc',
-	    				danger: '#ed3921',
-	    				success: '#8dc63f'
-	    			}
+	    			cssprefix: '.icon-'
 	    		}
 	    	}
-	    }
+	    },
+
+	    svg2png: {
+        all: {
+            // specify files in array format with multiple src-dest mapping
+            files: [
+                // rasterize all SVG files in "img" and its subdirectories to "img/png"
+                { src: ['images/src/svgs/*.svg'], dest: 'images/src/png/' }
+            ]
+        }
+    }
 	} );
 
 	// Default task.
 	
 	grunt.registerTask( 'default', ['watch:dev'] );
-	grunt.registerTask('icons', ['clean', 'svgmin', 'grunticon']);
+	grunt.registerTask('icons', ['clean', 'svgmin']);
+	grunt.registerTask('pngconv', ['svg2png']);
 	
 
 	grunt.util.linefeed = '\n';
