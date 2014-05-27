@@ -88,7 +88,7 @@ module.exports = function( grunt ) {
 		less: {
 			dev: {
 				options: {
-					path: pathLESS,
+					path: pathCSS,
 					cleancss: true
 				},
 				files: {
@@ -162,7 +162,10 @@ module.exports = function( grunt ) {
 	    			dest: 'images/src/svgs-output'
 	    		}],
 	    		options: {
-	    			cssprefix: '.icon-'
+	    			cssprefix: '.icon-',
+	    			colors: {
+                        success: '#15110c'
+                    }
 	    		}
 	    	}
 	    },
@@ -181,7 +184,7 @@ module.exports = function( grunt ) {
 	// Default task.
 	
 	grunt.registerTask( 'default', ['watch:dev'] );
-	grunt.registerTask('icons', ['clean', 'svgmin']);
+	grunt.registerTask('icons', ['clean', 'svgmin', 'grunticon']);
 	grunt.registerTask('pngconv', ['svg2png']);
 	
 

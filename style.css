@@ -189,15 +189,21 @@ body:after {
 body:after {
   clear: both;
 }
+html {
+  background: url('images/src/wood-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
 body {
   font-family: Verdana, Arial, sans-serif;
 }
 .head_names {
-  color: #3e3022;
   font-family: lavanderia;
   font-size: 9rem;
   font-size: 90px;
-  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.9);
+  text-shadow: -1px -1px 1px #000000;
+  color: #000000;
+  opacity: 0.75;
+  text-align: center;
 }
 .head_names_left,
 .head_names_right {
@@ -205,7 +211,7 @@ body {
   display: inline-block;
 }
 .head_names_left .head_names_last {
-  right: 31px;
+  right: 34px;
 }
 .head_names_right .head_names_last {
   right: 22px;
@@ -218,16 +224,36 @@ body {
   bottom: 37px;
 }
 #menu-menu {
-  padding: 0;
-  margin: 0;
   background-color: #c6d1cb;
+  text-align: center;
+  padding: 0;
+  width: 478.8px;
+  margin: 0 auto;
+  *zoom: 1;
+}
+#menu-menu:before,
+#menu-menu:after {
+  content: "";
+  display: table;
+}
+#menu-menu:after {
+  clear: both;
 }
 .menu-menu-container {
   padding: 3px 0;
+  width: 478.8px;
+  margin: 0 auto;
+  *zoom: 1;
   border-top: dashed 1px #000000;
   border-bottom: dashed 1px #000000;
-  margin-left: 28.5px;
-  margin-right: 28.5px;
+}
+.menu-menu-container:before,
+.menu-menu-container:after {
+  content: "";
+  display: table;
+}
+.menu-menu-container:after {
+  clear: both;
 }
 .menu-item {
   list-style: none;
@@ -235,14 +261,15 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   font-family: metaserif;
-  padding: 10px 19px;
+  padding: 10px 15px;
+  font-size: 1.4rem;
+  font-size: 14px;
 }
 .menu-item a {
   text-decoration: none;
   color: #1b141b;
 }
 .main_outer {
-  display: block;
   width: 570px;
   margin: 0 auto;
   *zoom: 1;
@@ -254,4 +281,41 @@ body {
 }
 .main_outer:after {
   clear: both;
+}
+.gbwedding-eatdrink {
+  font-family: lavanderia;
+  font-size: 3.3rem;
+  font-size: 33px;
+  text-align: center;
+  color: #000000;
+  opacity: 0.75;
+  text-shadow: -1px -1px 1px #000000;
+  margin-top: 20px;
+}
+.gbwedding-location {
+  background: url('images/src/png/border-bg.png') no-repeat top center;
+  text-transform: uppercase;
+  font-family: haymaker;
+  text-align: center;
+  height: 34px;
+  padding-top: 9px;
+  margin-top: 25px;
+  text-shadow: 0 0 1px #000000;
+  font-size: 2rem;
+  font-size: 20px;
+  opacity: 0.75;
+}
+.icon {
+  text-indent: -9999px;
+  opacity: .9;
+}
+.icon-invited-banner {
+  height: 88px;
+  background: top center;
+}
+.icon-top-flourish {
+  height: 43px;
+  background: top center;
+  margin-top: 54px;
+  margin-bottom: -20px;
 }

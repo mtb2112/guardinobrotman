@@ -28,6 +28,7 @@
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_stylesheet_uri() ?>" />
     <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_stylesheet_directory_uri() ?>/fonts.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_stylesheet_directory_uri() ?>/images/src/svgs-output/icons.data.svg.css" />
     <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php echo tfuse_options('feedburner_url', get_bloginfo_rss('rss2_url')); ?>" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     <?php
@@ -45,7 +46,8 @@
                 <!-- header -->
                 <div class="header">
                     <div class="head_title">
-                        <h1 class="icon-invited-banner"><?php echo tfuse_options('header_title'); ?></h1>
+                        <div class="icon icon-top-flourish"></div>
+                        <h1 class="icon icon-invited-banner"><?php echo tfuse_options('header_title'); ?></h1>
                         <p class="sub_title"><?php echo tfuse_options('header_subtitle'); ?></p>
                     </div>
                     <div class="head_names">

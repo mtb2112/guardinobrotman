@@ -13,15 +13,22 @@ Template: just-married-parent
 @import 'semantic-grid/stylesheets/less/_grid';
 @import 'variables/_variables';
 
+html {
+	background: url('images/src/wood-bg.jpg') no-repeat center center fixed;
+	background-size: cover;
+}
+
 body {
 	font-family: @font-base;
 }
 
 .head_names {
-	color: @heading-color;
 	font-family: @header-font;
 	.font-size(@base-size-h1);
-	text-shadow: -1px -1px 1px fadeout(@black, 10%);
+	text-shadow: -1px -1px 1px @black;
+	color: multiply(@heading-color, @black);
+	.fade;
+	text-align: center;
 
 	&_left,
 	&_right {
@@ -31,7 +38,7 @@ body {
 
 	&_left {
 		.head_names_last {
-			right: 31px;
+			right: 34px;
 		}
 	}
 
@@ -39,10 +46,6 @@ body {
 		.head_names_last {
 			right: 22px;
 		}
-	}
-
-	&_first {
-		
 	}
 
 	&_last {
@@ -54,16 +57,16 @@ body {
 }
 
 #menu-menu {
-	padding: 0;
-	margin: 0;
 	background-color: @menu-bg-color;
+	text-align: center;
+	padding: 0;
+	.row(8.4);
 }
 
 .menu-menu-container {
 	padding: 3px 0;
+	.row(8.4);
 	.bordered();
-	.push(.5);
-	.pull(.5);
 }
 
 .menu-item {
@@ -72,7 +75,8 @@ body {
 		text-transform: uppercase;
 		text-decoration: none;
 		font-family: @menu-font;
-		padding: 10px 19px;
+		padding: 10px 15px;
+		.font-size(@base-size-sm1);
 
 		a {
 			text-decoration: none;
@@ -82,4 +86,46 @@ body {
 
 .main_outer {
 	.row(10);
+}
+	.gbwedding {
+
+		&-eatdrink {
+			font-family: @header-font;
+			.font-size(@base-size-med);
+			text-align: center;
+			color: multiply(@heading-color, @black);
+			.fade;
+			text-shadow: -1px -1px 1px @black;
+			margin-top: 20px;
+		}
+
+		&-location {
+		background: url('images/src/png/border-bg.png') no-repeat top center;
+		text-transform: uppercase;
+		font-family: @sub-heading-font;
+		text-align: center;
+		height: 34px;
+		padding-top: 9px;
+		margin-top: 25px;
+		text-shadow: 0 0 1px @black;
+		.font-size(@base-size-h3);
+		.fade();
+	}
+	}
+
+.icon {
+	text-indent:-9999px;
+	opacity: .9;
+
+	&-invited-banner {
+		height: 88px;
+		background: top center;
+	}
+
+	&-top-flourish {
+		height: 43px;
+		background: top center;
+		margin-top: 54px;
+		margin-bottom: -20px;
+	}
 }
