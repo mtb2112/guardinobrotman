@@ -8,7 +8,7 @@ module.exports = function( grunt ) {
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
 	// Project configuration
-	grunt.initConfig( {
+	grunt.initConfig({
 		pkg:    grunt.file.readJSON( 'package.json' ),
 		concat: {
 			options: {
@@ -134,59 +134,43 @@ module.exports = function( grunt ) {
 	        }
 	    },
 
-	    // SVG Task
-	    clean: ['images/src/svgs-compressed', 'images/src/svgs-output'], //removes old data
-
-	    svgmin: { //minimize SVG files
-	    	options: {
-	    		plugins: [
-		    		{ removeViewBox: false },
-		    		{ removeUselessStrokeAndFill: false }
-	    		]
-	    	},
-	    	dist: {
-	    		expand: true,
-	    		cwd: 'images/src/svgs',
-	    		src: ['*.svg'],
-	    		dest: 'images/src/svgs-compressed',
-	    		ext: '.colors-light-danger-success.svg'
-	    	}
-	    },
-
-	    grunticon: { 
-	    	myIcons: {
+	    imagemin: {
+	    	png: {
+	    		options: {
+	    			optimizationLevel: 7
+	    		},
 	    		files: [{
 	    			expand: true,
-	    			cwd: 'images/src/svgs-compressed',
-	    			src: ['*.svg'],
-	    			dest: 'images/src/svgs-output'
-	    		}],
-	    		options: {
-	    			cssprefix: '.icon-',
-	    			colors: {
-                        success: '#15110c'
-                    }
-	    		}
+	    			cwd: 'images',
+	    			src: ['**/*.png'],
+	    			dest: 'images',
+	    			ext: '.png'
+	    		}]
 	    	}
 	    },
 
-	    svg2png: {
-        all: {
-            // specify files in array format with multiple src-dest mapping
-            files: [
-                // rasterize all SVG files in "img" and its subdirectories to "img/png"
-                { src: ['images/src/svgs/*.svg'], dest: 'images/src/png/' }
-            ]
+	    sprite: {
+            dist: {
+                src: ['images/src/png/*.png'],
+                destImg: 'images/sprite.png',
+                destCSS: 'assets/less/_sprite.less',
+                cssFormat: 'less',
+                imgPath: 'images/sprite.png',
+                algorithm: 'top-down',
+                padding: 10
+            }
         }
-    }
-	} );
+	});
 
 	// Default task.
 	
 	grunt.registerTask( 'default', ['watch:dev'] );
 	grunt.registerTask('icons', ['clean', 'svgmin', 'grunticon']);
 	grunt.registerTask('pngconv', ['svg2png']);
+	grunt.registerTask('pngmin', ['imagemin:png']);
+	grunt.registerTask('spritesheet', ['sprite']);
 	
 
 	grunt.util.linefeed = '\n';
+
 };

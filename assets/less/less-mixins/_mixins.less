@@ -12,3 +12,15 @@
 .fade( @opacity: .75 ) {
 	opacity: @opacity;
 }
+
+.scaleX(@scaleX: scaleX(-1)){
+	-webkit-transform: @scaleX;
+	-ms-transform: @scaleX;
+	transform: @scaleX;
+}
+
+.rotate(@val: 120deg) {
+	-webkit-transform: rotate(@val);
+	-ms-transform: rotate(@val);
+	transform: rotate(@val);
+}

@@ -2,7 +2,7 @@ $().ready(function() {
 	var date = $('.gbwedding-date');	
 
     date.arctext({
-    	radius: 2200,
+    	radius: 660,
     	dir: -1
     });
 });

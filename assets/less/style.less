@@ -12,6 +12,7 @@ Template: just-married-parent
 @import 'normalize-less/_normalize';
 @import 'semantic-grid/stylesheets/less/_grid';
 @import 'variables/_variables';
+@import '_sprite'
 
 html {
 	background: url('images/src/wood-bg.jpg') no-repeat center center fixed;
@@ -29,6 +30,7 @@ body {
 	color: multiply(@heading-color, @black);
 	.fade;
 	text-align: center;
+	margin-top: -30px;
 
 	&_left,
 	&_right {
@@ -97,7 +99,24 @@ body {
 		color: multiply(@heading-color, @black);
 		.fade;
 		text-shadow: -1px -1px 1px @black;
-		margin-top: 20px;
+		margin-top: -15px;
+		position: relative;
+
+		&:before,
+		&:after {
+			position: absolute;
+			top: -6px;
+		}
+
+		&:before {
+			content: url('images/src/png/fork.png');
+			left: 186px;
+		}
+
+		&:after {
+			content: url('images/src/png/spoon.png');
+			right: 183px;
+		}
 	}
 
 	&-location {
@@ -122,7 +141,44 @@ body {
 		height: 117px;
 		background: url('images/src/png/date-banner.png') no-repeat top center;
 		padding-top: 60px;
+		margin-top: -65px;
 		.font-size(@base-size-lg);
+	}
+
+	&-rsvp {
+		background: url('images/src/png/rsvp-button-bg.png') no-repeat top center;
+		text-align: center;
+		height: 62px;
+		padding-top: 20px;
+		margin-top: -36px;
+	}
+
+	&-rsvp-button {
+		text-decoration: none;
+		font-family: @banner-font;
+		color: multiply(@heading-color, @black);
+		text-transform: uppercase;
+		text-shadow: 0 0 1px @black;
+		position: relative;
+		.font-size(@base-size-h4);
+
+			&:before,
+			&:after {
+				content: url('images/src/png/finger.png');
+				position: absolute;
+				top: 6px;
+			}
+
+			&:before {
+				left: -150px;
+			}
+
+			&:after {
+				right: -150px;
+				filter: FlipH;
+				-ms-filter: "FlipH";
+				.scaleX();
+			}
 	}
 }
 
@@ -145,6 +201,7 @@ body {
 	&-wedding-badge {
 		height: 87px;
 		background: url('images/src/png/wedding-badge.png') no-repeat top center;
+		margin-top: -30px;
 	}
 }
 

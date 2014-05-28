@@ -204,6 +204,7 @@ body {
   color: #000000;
   opacity: 0.75;
   text-align: center;
+  margin-top: -30px;
 }
 .head_names_left,
 .head_names_right {
@@ -290,7 +291,21 @@ body {
   color: #000000;
   opacity: 0.75;
   text-shadow: -1px -1px 1px #000000;
-  margin-top: 20px;
+  margin-top: -15px;
+  position: relative;
+}
+.gbwedding-eatdrink:before,
+.gbwedding-eatdrink:after {
+  position: absolute;
+  top: -6px;
+}
+.gbwedding-eatdrink:before {
+  content: url('images/src/png/fork.png');
+  left: 186px;
+}
+.gbwedding-eatdrink:after {
+  content: url('images/src/png/spoon.png');
+  right: 183px;
 }
 .gbwedding-location {
   background: url('images/src/png/border-bg.png') no-repeat top center;
@@ -314,8 +329,43 @@ body {
   height: 117px;
   background: url('images/src/png/date-banner.png') no-repeat top center;
   padding-top: 60px;
+  margin-top: -65px;
   font-size: 3.9rem;
   font-size: 39px;
+}
+.gbwedding-rsvp {
+  background: url('images/src/png/rsvp-button-bg.png') no-repeat top center;
+  text-align: center;
+  height: 62px;
+  padding-top: 20px;
+  margin-top: -36px;
+}
+.gbwedding-rsvp-button {
+  text-decoration: none;
+  font-family: lincoln;
+  color: #000000;
+  text-transform: uppercase;
+  text-shadow: 0 0 1px #000000;
+  position: relative;
+  font-size: 2.1rem;
+  font-size: 21px;
+}
+.gbwedding-rsvp-button:before,
+.gbwedding-rsvp-button:after {
+  content: url('images/src/png/finger.png');
+  position: absolute;
+  top: 6px;
+}
+.gbwedding-rsvp-button:before {
+  left: -150px;
+}
+.gbwedding-rsvp-button:after {
+  right: -150px;
+  filter: FlipH;
+  -ms-filter: "FlipH";
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 .icon {
   text-indent: -9999px;
@@ -334,6 +384,7 @@ body {
 .icon-wedding-badge {
   height: 87px;
   background: url('images/src/png/wedding-badge.png') no-repeat top center;
+  margin-top: -30px;
 }
 .char21,
 .char22 {
