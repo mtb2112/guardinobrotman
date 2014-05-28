@@ -87,19 +87,20 @@ body {
 .main_outer {
 	.row(10);
 }
-	.gbwedding {
+	
+.gbwedding {
 
-		&-eatdrink {
-			font-family: @header-font;
-			.font-size(@base-size-med);
-			text-align: center;
-			color: multiply(@heading-color, @black);
-			.fade;
-			text-shadow: -1px -1px 1px @black;
-			margin-top: 20px;
-		}
+	&-eatdrink {
+		font-family: @header-font;
+		.font-size(@base-size-med);
+		text-align: center;
+		color: multiply(@heading-color, @black);
+		.fade;
+		text-shadow: -1px -1px 1px @black;
+		margin-top: 20px;
+	}
 
-		&-location {
+	&-location {
 		background: url('images/src/png/border-bg.png') no-repeat top center;
 		text-transform: uppercase;
 		font-family: @sub-heading-font;
@@ -111,15 +112,27 @@ body {
 		.font-size(@base-size-h3);
 		.fade();
 	}
+
+	&-date {
+		font-family: @banner-font;
+		text-shadow: 0 0 1px @black;
+		color: multiply(@heading-color, @black);
+		text-transform: uppercase;
+		text-align: center;
+		height: 117px;
+		background: url('images/src/png/date-banner.png') no-repeat top center;
+		padding-top: 60px;
+		.font-size(@base-size-lg);
 	}
+}
 
 .icon {
 	text-indent:-9999px;
 	opacity: .9;
 
 	&-invited-banner {
-		height: 88px;
-		background: top center;
+		height: 126px;
+		background: url('images/src/png/invited-banner.png') no-repeat top center;
 	}
 
 	&-top-flourish {
@@ -128,4 +141,15 @@ body {
 		margin-top: 54px;
 		margin-bottom: -20px;
 	}
+
+	&-wedding-badge {
+		height: 87px;
+		background: url('images/src/png/wedding-badge.png') no-repeat top center;
+	}
+}
+
+.char21,
+.char22 {
+	vertical-align: super;
+	.font-size(@base-size-h3);
 }

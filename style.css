@@ -305,17 +305,39 @@ body {
   font-size: 20px;
   opacity: 0.75;
 }
+.gbwedding-date {
+  font-family: lincoln;
+  text-shadow: 0 0 1px #000000;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+  height: 117px;
+  background: url('images/src/png/date-banner.png') no-repeat top center;
+  padding-top: 60px;
+  font-size: 3.9rem;
+  font-size: 39px;
+}
 .icon {
   text-indent: -9999px;
   opacity: .9;
 }
 .icon-invited-banner {
-  height: 88px;
-  background: top center;
+  height: 126px;
+  background: url('images/src/png/invited-banner.png') no-repeat top center;
 }
 .icon-top-flourish {
   height: 43px;
   background: top center;
   margin-top: 54px;
   margin-bottom: -20px;
+}
+.icon-wedding-badge {
+  height: 87px;
+  background: url('images/src/png/wedding-badge.png') no-repeat top center;
+}
+.char21,
+.char22 {
+  vertical-align: super;
+  font-size: 2rem;
+  font-size: 20px;
 }
