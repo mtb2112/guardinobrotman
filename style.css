@@ -481,18 +481,23 @@ body {
   font-size: 2rem;
   font-size: 20px;
 }
-.post:before,
-.post:after,
-.post-detail {
-  background: url('images/content-bg.png');
-}
-.post-detail {
-  background-repeat: repeat-y;
-}
-.post-detail:before,
-.post-detail:after {
-  content: '';
-  background-position: 0 570px;
-  height: 37px;
-  display: block;
-}
+/*.post {
+
+	&:before,
+	&:after,
+	&-detail {
+		background: url('images/content-bg.png')
+	}
+
+	&-detail {
+		background-repeat: repeat-y;
+
+		&:before,
+		&:after {
+			content:'';
+			background-position: 0 570px;
+			height: 37px;
+			display: block;
+		}
+	}
+}*/
