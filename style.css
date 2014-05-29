@@ -189,6 +189,26 @@ body:after {
 body:after {
   clear: both;
 }
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path;
+*/
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+*/
 html {
   background: url('images/src/wood-bg.jpg') no-repeat center center fixed;
   background-size: cover;
@@ -196,33 +216,59 @@ html {
 body {
   font-family: Verdana, Arial, sans-serif;
 }
+.head_title {
+  position: relative;
+}
+.head_title:before,
+.head_title:after {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  background-image: url(images/sprite.png);
+  background-position: -115px -38px;
+  width: 41px;
+  height: 36px;
+}
+.head_title:before {
+  left: 134px;
+  -webkit-transform: rotate(-13deg);
+  -ms-transform: rotate(-13deg);
+  transform: rotate(-13deg);
+}
+.head_title:after {
+  right: 134px;
+  -webkit-transform: rotate(13deg);
+  -ms-transform: rotate(13deg);
+  transform: rotate(13deg);
+}
 .head_names {
   font-family: lavanderia;
-  font-size: 9rem;
-  font-size: 90px;
   text-shadow: -1px -1px 1px #000000;
   color: #000000;
-  opacity: 0.75;
   text-align: center;
   margin-top: -30px;
+  position: relative;
+  opacity: 0.75;
+  font-size: 9rem;
+  font-size: 90px;
 }
 .head_names_left,
 .head_names_right {
   position: relative;
   display: inline-block;
 }
+.head_names_last {
+  font-family: haymaker;
+  position: absolute;
+  bottom: 37px;
+  font-size: 2rem;
+  font-size: 20px;
+}
 .head_names_left .head_names_last {
   right: 34px;
 }
 .head_names_right .head_names_last {
   right: 22px;
-}
-.head_names_last {
-  font-family: haymaker;
-  position: absolute;
-  font-size: 2rem;
-  font-size: 20px;
-  bottom: 37px;
 }
 #menu-menu {
   background-color: #c6d1cb;
@@ -263,8 +309,14 @@ body {
   text-decoration: none;
   font-family: metaserif;
   padding: 10px 15px;
+  background-color: rgba(255, 255, 255, 0);
   font-size: 1.4rem;
   font-size: 14px;
+  -webkit-transition: all ease-in 0.2s;
+  transition: all ease-in 0.2s;
+}
+.menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .menu-item a {
   text-decoration: none;
@@ -285,40 +337,52 @@ body {
 }
 .gbwedding-eatdrink {
   font-family: lavanderia;
-  font-size: 3.3rem;
-  font-size: 33px;
   text-align: center;
   color: #000000;
-  opacity: 0.75;
   text-shadow: -1px -1px 1px #000000;
   margin-top: -15px;
   position: relative;
+  opacity: 0.75;
+  font-size: 3.3rem;
+  font-size: 33px;
 }
 .gbwedding-eatdrink:before,
 .gbwedding-eatdrink:after {
   position: absolute;
-  top: -6px;
+  top: 20px;
 }
 .gbwedding-eatdrink:before {
-  content: url('images/src/png/fork.png');
+  content: '';
   left: 186px;
+  background-image: url(images/sprite.png);
+  background-position: 0px 0px;
+  width: 47px;
+  height: 8px;
 }
 .gbwedding-eatdrink:after {
-  content: url('images/src/png/spoon.png');
+  content: '';
   right: 183px;
+  background-image: url(images/sprite.png);
+  background-position: -57px -18px;
+  width: 48px;
+  height: 10px;
 }
 .gbwedding-location {
-  background: url('images/src/png/border-bg.png') no-repeat top center;
   text-transform: uppercase;
   font-family: haymaker;
   text-align: center;
-  height: 34px;
   padding-top: 9px;
   margin-top: 25px;
   text-shadow: 0 0 1px #000000;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 2rem;
   font-size: 20px;
   opacity: 0.75;
+  background-image: url(images/sprite.png);
+  background-position: -882px -358px;
+  width: 334px;
+  height: 34px;
 }
 .gbwedding-date {
   font-family: lincoln;
@@ -326,19 +390,53 @@ body {
   color: #000000;
   text-transform: uppercase;
   text-align: center;
-  height: 117px;
-  background: url('images/src/png/date-banner.png') no-repeat top center;
   padding-top: 60px;
   margin-top: -65px;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 3.9rem;
   font-size: 39px;
+  background-image: url(images/sprite.png);
+  background-position: -1665px -538px;
+  width: 571px;
+  height: 117px;
 }
 .gbwedding-rsvp {
-  background: url('images/src/png/rsvp-button-bg.png') no-repeat top center;
   text-align: center;
-  height: 62px;
   padding-top: 20px;
   margin-top: -36px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+.gbwedding-rsvp:before,
+.gbwedding-rsvp:after {
+  content: '';
+  position: absolute;
+  top: 45px;
+  background-image: url(images/sprite.png);
+  background-position: -166px -84px;
+  width: 88px;
+  height: 42px;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+}
+.gbwedding-rsvp:before {
+  left: 60px;
+}
+.gbwedding-rsvp:after {
+  right: 60px;
+  filter: FlipH;
+  -ms-filter: "FlipH";
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.gbwedding-rsvp:hover:before {
+  left: 100px;
+}
+.gbwedding-rsvp:hover:after {
+  right: 100px;
 }
 .gbwedding-rsvp-button {
   text-decoration: none;
@@ -347,48 +445,54 @@ body {
   text-transform: uppercase;
   text-shadow: 0 0 1px #000000;
   position: relative;
+  display: inline-block;
+  padding-top: 20px;
+  background-image: url(images/sprite.png);
+  background-position: -264px -136px;
+  width: 137px;
+  height: 62px;
   font-size: 2.1rem;
   font-size: 21px;
-}
-.gbwedding-rsvp-button:before,
-.gbwedding-rsvp-button:after {
-  content: url('images/src/png/finger.png');
-  position: absolute;
-  top: 6px;
-}
-.gbwedding-rsvp-button:before {
-  left: -150px;
-}
-.gbwedding-rsvp-button:after {
-  right: -150px;
-  filter: FlipH;
-  -ms-filter: "FlipH";
-  -webkit-transform: scaleX(-1);
-  -ms-transform: scaleX(-1);
-  transform: scaleX(-1);
 }
 .icon {
   text-indent: -9999px;
   opacity: .9;
 }
 .icon-invited-banner {
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(images/sprite.png);
+  background-position: -1226px -402px;
+  width: 429px;
   height: 126px;
-  background: url('images/src/png/invited-banner.png') no-repeat top center;
-}
-.icon-top-flourish {
-  height: 43px;
-  background: top center;
-  margin-top: 54px;
-  margin-bottom: -20px;
 }
 .icon-wedding-badge {
-  height: 87px;
-  background: url('images/src/png/wedding-badge.png') no-repeat top center;
   margin-top: -30px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(images/sprite.png);
+  background-position: -411px -208px;
+  width: 191px;
+  height: 87px;
 }
 .char21,
 .char22 {
   vertical-align: super;
   font-size: 2rem;
   font-size: 20px;
+}
+.post:before,
+.post:after,
+.post-detail {
+  background: url('images/content-bg.png');
+}
+.post-detail {
+  background-repeat: repeat-y;
+}
+.post-detail:before,
+.post-detail:after {
+  content: '';
+  background-position: 0 570px;
+  height: 37px;
+  display: block;
 }
