@@ -6,6 +6,18 @@
 		 url('assets/fonts/lavanderia_sturdy-webfont.woff') format('woff'),
 		 url('assets/fonts/lavanderia_sturdy-webfont.ttf') format('truetype'),
 		 url('assets/fonts/lavanderia_sturdy-webfont.svg#lavanderia_sturdy-webfont') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+/* Lavanderia - Regular */
+@font-face {
+	font-family: 'lavanderia';
+	src: url('assets/fonts/Lavanderia-Regular.eot');
+	src: url('assets/fonts/Lavanderia-Regular.eot?#iefix') format('embedded-opentype'),
+		 url('assets/fonts/Lavanderia-Regular.woff') format('woff'),
+		 url('assets/fonts/Lavanderia-Regular.ttf') format('truetype'),
+		 url('assets/fonts/Lavanderia-Regular.svg#Lavanderia-Regular') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }

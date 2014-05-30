@@ -225,7 +225,7 @@ body {
   position: absolute;
   bottom: 20px;
   background-image: url(images/sprite.png);
-  background-position: -115px -38px;
+  background-position: -135px -58px;
   width: 41px;
   height: 36px;
 }
@@ -251,6 +251,10 @@ body {
   opacity: 0.75;
   font-size: 9rem;
   font-size: 90px;
+}
+.head_names_first,
+.head_names_amp {
+  font-weight: bold;
 }
 .head_names_left,
 .head_names_right {
@@ -291,8 +295,8 @@ body {
   width: 478.8px;
   margin: 0 auto;
   *zoom: 1;
-  border-top: dashed 1px #000000;
-  border-bottom: dashed 1px #000000;
+  border-top: 1px dashed #000000;
+  border-bottom: 1px dashed #000000;
 }
 .menu-menu-container:before,
 .menu-menu-container:after {
@@ -342,6 +346,7 @@ body {
   text-shadow: -1px -1px 1px #000000;
   margin-top: -15px;
   position: relative;
+  font-weight: bold;
   opacity: 0.75;
   font-size: 3.3rem;
   font-size: 33px;
@@ -363,7 +368,7 @@ body {
   content: '';
   right: 183px;
   background-image: url(images/sprite.png);
-  background-position: -57px -18px;
+  background-position: -67px -28px;
   width: 48px;
   height: 10px;
 }
@@ -380,7 +385,7 @@ body {
   font-size: 20px;
   opacity: 0.75;
   background-image: url(images/sprite.png);
-  background-position: -882px -358px;
+  background-position: -1296px -591px;
   width: 334px;
   height: 34px;
 }
@@ -397,7 +402,7 @@ body {
   font-size: 3.9rem;
   font-size: 39px;
   background-image: url(images/sprite.png);
-  background-position: -1665px -538px;
+  background-position: -2099px -791px;
   width: 571px;
   height: 117px;
 }
@@ -415,7 +420,7 @@ body {
   position: absolute;
   top: 45px;
   background-image: url(images/sprite.png);
-  background-position: -166px -84px;
+  background-position: -271px -188px;
   width: 88px;
   height: 42px;
   -webkit-transition: all ease-in-out 0.4s;
@@ -448,7 +453,7 @@ body {
   display: inline-block;
   padding-top: 20px;
   background-image: url(images/sprite.png);
-  background-position: -264px -136px;
+  background-position: -648px -339px;
   width: 137px;
   height: 62px;
   font-size: 2.1rem;
@@ -458,6 +463,9 @@ body {
   background: url('images/content-bg.png');
   position: relative;
   margin-top: 54px;
+  padding-bottom: 55px;
+  padding-top: 21px;
+  color: #d7dfd2;
 }
 .gbwedding-contentbg:before,
 .gbwedding-contentbg:after {
@@ -479,16 +487,102 @@ body {
 }
 .gbwedding-heading {
   font-family: lavanderia;
-  color: #d7dfd2;
   font-weight: normal;
   font-size: 3.6rem;
   font-size: 36px;
 }
-.gbwedding-page-subheading {
+.gbwedding-page-subheading,
+.gbwedding-ribbon-btn {
   font-family: haymaker;
+  font-size: 1.5rem;
+  font-size: 15px;
+}
+.gbwedding-heading,
+.gbwedding-text,
+.gbwedding-page-subheading {
+  text-align: center;
   color: #d7dfd2;
-  font-size: 1.4rem;
-  font-size: 14px;
+}
+.gbwedding-page-subheading {
+  margin-left: 60px;
+}
+.gbwedding-text {
+  font-family: metaserif;
+  padding: 0 52px;
+  margin-top: -26px;
+  font-size: 1.8rem;
+  font-size: 18px;
+}
+.gbwedding-page-bottom {
+  background-position: -173px -102px;
+  position: relative;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  width: 406.97999999999996px;
+  margin: 0 auto;
+  *zoom: 1;
+  background-image: url(images/sprite.png);
+}
+.gbwedding-page-bottom:before,
+.gbwedding-page-bottom:after {
+  content: "";
+  display: table;
+}
+.gbwedding-page-bottom:after {
+  clear: both;
+}
+.gbwedding-page-bottom:after {
+  content: '';
+  position: absolute;
+  left: 40.2%;
+  bottom: -55px;
+  color: #13001f;
+  background-image: url(images/sprite.png);
+  background-position: -379px -250px;
+  width: 98px;
+  height: 22px;
+}
+.gbwedding-ribbon-btn {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 8px;
+  text-shadow: 0 0 1px #000000;
+  margin-top: -5px;
+  margin-bottom: 7px;
+  color: #13001f;
+  background-image: url(images/sprite.png);
+  background-position: -497px -292px;
+  width: 131px;
+  height: 27px;
+  font-size: 1.2rem;
+  font-size: 12px;
+}
+.gbwedding-ribbon-wrap {
+  width: 108.3px;
+  margin: 0 auto;
+  *zoom: 1;
+}
+.gbwedding-ribbon-wrap:before,
+.gbwedding-ribbon-wrap:after {
+  content: "";
+  display: table;
+}
+.gbwedding-ribbon-wrap:after {
+  clear: both;
+}
+.gbwedding-image-wrap {
+  width: 406.97999999999996px;
+  margin: 0 auto;
+  *zoom: 1;
+}
+.gbwedding-image-wrap:before,
+.gbwedding-image-wrap:after {
+  content: "";
+  display: table;
+}
+.gbwedding-image-wrap:after {
+  clear: both;
 }
 .icon {
   text-indent: -9999px;
@@ -498,7 +592,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   background-image: url(images/sprite.png);
-  background-position: -1226px -402px;
+  background-position: -1650px -645px;
   width: 429px;
   height: 126px;
 }
@@ -507,7 +601,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   background-image: url(images/sprite.png);
-  background-position: -411px -208px;
+  background-position: -805px -421px;
   width: 191px;
   height: 87px;
 }
