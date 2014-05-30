@@ -229,6 +229,44 @@ body {
 		.sprite(@rsvp-button-bg);
 		.font-size(@base-size-h4);
 	}
+
+	&-contentbg {
+		background: url('images/content-bg.png');
+		position: relative;
+		margin-top: 54px;
+
+		&:before,
+		&:after {
+			content:'';
+			background: url('images/content-bg.png') -570px 0 no-repeat;
+			height: 37px;
+			width: 570px;
+			display: block;
+			position: absolute;
+		}
+
+		&:before {
+			top: -37px;
+		}
+
+		&:after {
+			bottom: -37px;
+			.rotate(180deg);
+		}
+	}
+
+	&-heading {
+		font-family: @header-font;
+		color: @input-bg;
+		font-weight: normal;
+		.font-size(@base-size-h2);
+	}
+
+	&-page-subheading {
+		font-family: @sub-heading-font;
+		color: @input-bg;
+		.font-size(@base-size-sm1);
+	}
 }
 
 .icon {
@@ -252,24 +290,3 @@ body {
 	vertical-align: super;
 	.font-size(@base-size-h3);
 }
-
-/*.post {
-
-	&:before,
-	&:after,
-	&-detail {
-		background: url('images/content-bg.png')
-	}
-
-	&-detail {
-		background-repeat: repeat-y;
-
-		&:before,
-		&:after {
-			content:'';
-			background-position: 0 570px;
-			height: 37px;
-			display: block;
-		}
-	}
-}*/
