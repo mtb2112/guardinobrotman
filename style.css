@@ -465,6 +465,7 @@ body {
   margin-top: 54px;
   padding-bottom: 55px;
   padding-top: 21px;
+  text-shadow: 1px 1px 1px #000000;
   color: #d7dfd2;
 }
 .gbwedding-contentbg:before,
@@ -485,11 +486,19 @@ body {
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-.gbwedding-heading {
+.gbwedding-contentbg h1 {
   font-family: lavanderia;
   font-weight: normal;
+  text-align: center;
   font-size: 3.6rem;
   font-size: 36px;
+}
+.gbwedding-contentbg p {
+  text-align: center;
+  color: #d7dfd2;
+  font-family: metaserif;
+  font-size: 1.5rem;
+  font-size: 15px;
 }
 .gbwedding-page-subheading,
 .gbwedding-ribbon-btn {
@@ -497,31 +506,14 @@ body {
   font-size: 1.5rem;
   font-size: 15px;
 }
-.gbwedding-heading,
-.gbwedding-text,
-.gbwedding-page-subheading {
-  text-align: center;
-  color: #d7dfd2;
-}
-.gbwedding-page-subheading {
-  margin-left: 60px;
-}
-.gbwedding-text {
-  font-family: metaserif;
-  padding: 0 52px;
-  margin-top: -26px;
-  font-size: 1.8rem;
-  font-size: 18px;
-}
 .gbwedding-page-bottom {
-  background-position: -173px -102px;
   position: relative;
+  padding-top: 20px;
   border-top: 1px solid #000000;
   border-bottom: 1px solid #000000;
   width: 406.97999999999996px;
   margin: 0 auto;
   *zoom: 1;
-  background-image: url(images/sprite.png);
 }
 .gbwedding-page-bottom:before,
 .gbwedding-page-bottom:after {
@@ -530,6 +522,12 @@ body {
 }
 .gbwedding-page-bottom:after {
   clear: both;
+}
+.gbwedding-page-bottom h1 {
+  font-family: haymaker;
+  margin: 0;
+  font-size: 1.5rem;
+  font-size: 15px;
 }
 .gbwedding-page-bottom:after {
   content: '';
@@ -542,6 +540,13 @@ body {
   width: 98px;
   height: 22px;
 }
+.gbwedding-page-bottom-wedding {
+  background-position: -173px -102px;
+  background-image: url(images/sprite.png);
+}
+.gbwedding-page-bottom-wedding h1 {
+  padding-left: 70px;
+}
 .gbwedding-ribbon-btn {
   display: block;
   text-decoration: none;
@@ -549,7 +554,6 @@ body {
   padding-top: 8px;
   text-shadow: 0 0 1px #000000;
   margin-top: -5px;
-  margin-bottom: 7px;
   color: #13001f;
   background-image: url(images/sprite.png);
   background-position: -497px -292px;
@@ -558,18 +562,12 @@ body {
   font-size: 1.2rem;
   font-size: 12px;
 }
-.gbwedding-ribbon-wrap {
-  width: 108.3px;
-  margin: 0 auto;
-  *zoom: 1;
-}
-.gbwedding-ribbon-wrap:before,
-.gbwedding-ribbon-wrap:after {
-  content: "";
-  display: table;
-}
-.gbwedding-ribbon-wrap:after {
-  clear: both;
+.gbwedding-ribbon-btn-wrap {
+  width: 131px;
+  margin-bottom: 0;
+  padding-left: 45px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .gbwedding-image-wrap {
   width: 406.97999999999996px;

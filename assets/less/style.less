@@ -242,6 +242,7 @@ body {
 		margin-top: 54px;
 		padding-bottom: 55px;
 		padding-top: 21px;
+		text-shadow: 1px 1px 1px @black;
 		color: @body-text-color;
 
 		&:before,
@@ -262,12 +263,20 @@ body {
 			bottom: -37px;
 			.rotate(180deg);
 		}
-	}
 
-	&-heading {
-		font-family: @header-font;
-		font-weight: normal;
-		.font-size(@base-size-h2);
+		h1 {
+			font-family: @header-font;
+			font-weight: normal;
+			text-align: center;
+			.font-size(@base-size-h2);
+		}
+
+		p {
+			text-align: center;
+			color: @body-text-color;
+			font-family: @menu-font;
+			.font-size(@base-size-sm);
+		}
 	}
 
 	&-page-subheading,
@@ -276,30 +285,17 @@ body {
 		.font-size(@base-size-sm);
 	}
 
-	&-heading,
-	&-text,
-	&-page-subheading {
-		text-align: center;
-		color: @body-text-color;
-	}
-
-	&-page-subheading {
-		margin-left: 60px;
-	}
-
-	&-text {
-		font-family: @menu-font;
-		padding: 0 52px;
-		margin-top: -26px;
-		.font-size(@base-size-h5);
-	}
-
 	&-page-bottom {
-		background-position: -173px -102px;
 		position: relative;
+		padding-top: 20px;
 		.bordered(1px, solid, @black);
 		.row(7.14);
-		.sprite-image(@map-icon);
+
+		h1 {
+			font-family: @sub-heading-font;
+			margin: 0;
+			.font-size(@base-size-sm);
+		}
 
 		&:after {
 			content: '';
@@ -309,6 +305,15 @@ body {
 			bottom: -55px;
 			color: @button-text-color;
 			.sprite(@bottom-flourish);
+		}
+
+		&-wedding {
+			background-position: -173px -102px;
+			.sprite-image(@map-icon);
+
+			h1 {
+				padding-left: 70px;
+			}
 		}
 	}
 
@@ -321,14 +326,16 @@ body {
 			padding-top: 8px;
 			text-shadow: 0 0 1px @black;
 			margin-top: -5px;
-			margin-bottom: 7px;
 			color: @button-text-color;
 			.sprite(@ribbon-bg);
 			.font-size(@base-font-size);
-		}
 
-		&-wrap {
-			.row(1.9)
+			&-wrap {
+				width: @ribbon-bg-width;
+				margin-bottom: 0;
+				padding-left: 45px;
+				.marginauto();
+			}
 		}
 	}
 
