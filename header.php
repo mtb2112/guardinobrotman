@@ -42,7 +42,6 @@
     <div class="body_wrap" <?php tfuse_frame_style(); ?> >
         <div class="main_outer">
             <div class="main_top"></div>
-            <div class="main_mid">
                 <!-- header -->
                 <div class="header">
                     <div class="head_title">
@@ -68,6 +67,7 @@
             <div class="topmenu_line_top"></div>
             <?php  tfuse_menu('default');  ?>
             <div class="topmenu_line_bot"></div><!--/ .topmenu -->
+            <div class="<?php if( !is_front_page()) : ?>main_mid<?php endif; ?>">
             <?php
                 global $is_tf_blog_page;
                 if($is_tf_blog_page) tfuse_category_on_blog_page();

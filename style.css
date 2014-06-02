@@ -225,7 +225,7 @@ body {
   position: absolute;
   bottom: 20px;
   background-image: url(images/sprite.png);
-  background-position: -135px -58px;
+  background-position: -439px -362px;
   width: 41px;
   height: 36px;
 }
@@ -339,6 +339,203 @@ body {
 .main_outer:after {
   clear: both;
 }
+.main_mid {
+  background: url('images/content-bg.png');
+  position: relative;
+  text-shadow: 1px 1px 1px #000000;
+  color: #d7dfd2;
+  margin-top: 66px;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+.main_mid:before,
+.main_mid:after {
+  content: '';
+  background: url('images/content-bg.png') -570px 0 no-repeat;
+  height: 37px;
+  width: 570px;
+  display: block;
+  position: absolute;
+}
+.main_mid:before {
+  top: -37px;
+}
+.main_mid:after {
+  bottom: -37px;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.main_mid h1 {
+  font-family: lavanderia;
+  font-weight: normal;
+  text-align: center;
+  font-size: 3.6rem;
+  font-size: 36px;
+}
+.main_mid p {
+  text-align: center;
+  color: #d7dfd2;
+  font-family: metaserif;
+  padding: 0 87px;
+  margin-bottom: 46px;
+  font-size: 1.5rem;
+  font-size: 15px;
+}
+.main_mid .hotel-item,
+.main_mid .bot_box {
+  position: relative;
+  text-align: left;
+  background-position: -158px -406px;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  width: 433.2px;
+  margin: 0 auto;
+  *zoom: 1;
+  background-image: url(images/sprite.png);
+}
+.main_mid .hotel-item:before,
+.main_mid .bot_box:before,
+.main_mid .hotel-item:after,
+.main_mid .bot_box:after {
+  content: "";
+  display: table;
+}
+.main_mid .hotel-item:after,
+.main_mid .bot_box:after {
+  clear: both;
+}
+.main_mid .hotel-item:after,
+.main_mid .bot_box:after {
+  content: '';
+  position: absolute;
+  left: 40.2%;
+  bottom: -55px;
+  color: #13001f;
+  background-image: url(images/sprite.png);
+  background-position: -615px -532px;
+  width: 98px;
+  height: 22px;
+}
+.main_mid .hotel-item p,
+.main_mid .bot_box p {
+  padding: 0;
+  text-align: left;
+  margin: 0;
+  font-size: 1.4rem;
+  font-size: 14px;
+}
+.main_mid .hotel-item h3,
+.main_mid .bot_box h3 {
+  font-family: haymaker;
+  margin-bottom: 13px;
+  margin-top: 20px;
+  font-weight: normal;
+  font-size: 1.2rem;
+  font-size: 12px;
+}
+.main_mid .hotel-item .item_descr,
+.main_mid .bot_box .item_descr {
+  padding-right: 100px;
+  margin-bottom: 20px;
+}
+.main_mid .hotel-item a,
+.main_mid .bot_box a {
+  text-decoration: none;
+  color: #da6055;
+}
+.main_mid .field_text {
+  text-align: left;
+  display: inline-block;
+  margin-bottom: 18px;
+}
+.main_mid .field_text .label_title {
+  display: block;
+  font-family: haymaker;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+  font-size: 1.2rem;
+  font-size: 12px;
+}
+.main_mid .field_text .inputtext {
+  border-radius: 4px;
+  border: none;
+  margin-right: 33px;
+  padding: 10px 5px;
+  background-color: #d7dfd2;
+  font-family: metaserif;
+  text-shadow: 0 0 1px #000000;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+}
+.main_mid .field_text .inputtext:focus {
+  background-color: #ffffff;
+  outline: 0;
+}
+.main_mid .field_text .custom-radio {
+  margin-right: 25px;
+}
+.main_mid .field_text .custom-radio input {
+  display: none;
+}
+.main_mid .field_text .custom-radio label {
+  font-family: haymaker;
+  background-position: 0 0;
+  cursor: pointer;
+  background-image: url(images/sprite.png);
+  font-size: 1.2rem;
+  font-size: 12px;
+}
+.main_mid .field_text .custom-radio label.checked {
+  background-position: -59px -59px;
+  background-image: url(images/sprite.png);
+}
+.main_mid .field_text .rowRadio {
+  display: inline-block;
+}
+.main_mid .field_text .input_styled {
+  text-align: center;
+  background-position: -1953px -983px;
+  padding-top: 10px;
+  background-image: url(images/sprite.png);
+  width: 417px;
+  height: 42px;
+}
+.main_mid .reservationForm {
+  margin-left: 28.5px;
+}
+.btn-submit {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 0 0 1px #000000;
+  margin-top: -5px;
+  color: #13001f;
+  background-color: transparent;
+  border: none;
+  font-family: haymaker;
+  background-image: url(images/sprite.png);
+  background-position: -881px -676px;
+  width: 131px;
+  height: 27px;
+  font-size: 1.2rem;
+  font-size: 12px;
+}
+.rowSubmit {
+  width: 171px;
+  margin: 0 auto;
+  *zoom: 1;
+  margin-bottom: 28px;
+}
+.rowSubmit:before,
+.rowSubmit:after {
+  content: "";
+  display: table;
+}
+.rowSubmit:after {
+  clear: both;
+}
 .gbwedding-eatdrink {
   font-family: lavanderia;
   text-align: center;
@@ -360,7 +557,7 @@ body {
   content: '';
   left: 186px;
   background-image: url(images/sprite.png);
-  background-position: 0px 0px;
+  background-position: -118px -118px;
   width: 47px;
   height: 8px;
 }
@@ -368,7 +565,7 @@ body {
   content: '';
   right: 183px;
   background-image: url(images/sprite.png);
-  background-position: -67px -28px;
+  background-position: -205px -166px;
   width: 48px;
   height: 10px;
 }
@@ -385,7 +582,7 @@ body {
   font-size: 20px;
   opacity: 0.75;
   background-image: url(images/sprite.png);
-  background-position: -1296px -591px;
+  background-position: -1760px -1055px;
   width: 334px;
   height: 34px;
 }
@@ -402,7 +599,7 @@ body {
   font-size: 3.9rem;
   font-size: 39px;
   background-image: url(images/sprite.png);
-  background-position: -2099px -791px;
+  background-position: -3060px -1377px;
   width: 571px;
   height: 117px;
 }
@@ -420,7 +617,7 @@ body {
   position: absolute;
   top: 45px;
   background-image: url(images/sprite.png);
-  background-position: -271px -188px;
+  background-position: -753px -594px;
   width: 88px;
   height: 42px;
   -webkit-transition: all ease-in-out 0.4s;
@@ -453,52 +650,11 @@ body {
   display: inline-block;
   padding-top: 20px;
   background-image: url(images/sprite.png);
-  background-position: -648px -339px;
+  background-position: -1052px -743px;
   width: 137px;
   height: 62px;
   font-size: 2.1rem;
   font-size: 21px;
-}
-.gbwedding-contentbg {
-  background: url('images/content-bg.png');
-  position: relative;
-  margin-top: 54px;
-  padding-bottom: 55px;
-  padding-top: 21px;
-  text-shadow: 1px 1px 1px #000000;
-  color: #d7dfd2;
-}
-.gbwedding-contentbg:before,
-.gbwedding-contentbg:after {
-  content: '';
-  background: url('images/content-bg.png') -570px 0 no-repeat;
-  height: 37px;
-  width: 570px;
-  display: block;
-  position: absolute;
-}
-.gbwedding-contentbg:before {
-  top: -37px;
-}
-.gbwedding-contentbg:after {
-  bottom: -37px;
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-.gbwedding-contentbg h1 {
-  font-family: lavanderia;
-  font-weight: normal;
-  text-align: center;
-  font-size: 3.6rem;
-  font-size: 36px;
-}
-.gbwedding-contentbg p {
-  text-align: center;
-  color: #d7dfd2;
-  font-family: metaserif;
-  font-size: 1.5rem;
-  font-size: 15px;
 }
 .gbwedding-page-subheading,
 .gbwedding-ribbon-btn {
@@ -536,16 +692,57 @@ body {
   bottom: -55px;
   color: #13001f;
   background-image: url(images/sprite.png);
-  background-position: -379px -250px;
+  background-position: -615px -532px;
   width: 98px;
   height: 22px;
 }
 .gbwedding-page-bottom-wedding {
-  background-position: -173px -102px;
+  background-position: -504px -422px;
   background-image: url(images/sprite.png);
 }
 .gbwedding-page-bottom-wedding h1 {
   padding-left: 70px;
+}
+.gbwedding-page-bottom-wedding .gbwedding-ribbon-btn-wrap {
+  margin-bottom: 8px;
+}
+.gbwedding-page-bottom-rsvp {
+  padding-top: 0;
+  background-position: -283px -198px;
+  background-image: url(images/sprite.png);
+}
+.gbwedding-page-bottom-rsvp p {
+  text-align: left;
+  font-family: haymaker;
+  padding-right: 0;
+  padding-left: 50px;
+  padding-top: 17px;
+  margin-bottom: 28px;
+  font-size: 1.2rem;
+  font-size: 12px;
+}
+.gbwedding-page-bottom-rsvp a {
+  text-decoration: none;
+  color: #da6055;
+}
+.gbwedding-page-bottom-registry {
+  padding-top: 0;
+  background-position: -345px -272px;
+  background-image: url(images/sprite.png);
+}
+.gbwedding-page-bottom-registry p {
+  text-align: left;
+  font-family: haymaker;
+  padding-right: 0;
+  padding-left: 75px;
+  padding-top: 17px;
+  margin-bottom: 28px;
+  font-size: 1.2rem;
+  font-size: 12px;
+}
+.gbwedding-page-bottom-registry a {
+  text-decoration: none;
+  color: #da6055;
 }
 .gbwedding-ribbon-btn {
   display: block;
@@ -556,21 +753,20 @@ body {
   margin-top: -5px;
   color: #13001f;
   background-image: url(images/sprite.png);
-  background-position: -497px -292px;
+  background-position: -881px -676px;
   width: 131px;
   height: 27px;
   font-size: 1.2rem;
   font-size: 12px;
 }
 .gbwedding-ribbon-btn-wrap {
-  width: 131px;
-  margin-bottom: 0;
-  padding-left: 45px;
+  width: 90px;
+  margin-bottom: 3px;
   margin-left: auto;
   margin-right: auto;
 }
 .gbwedding-image-wrap {
-  width: 406.97999999999996px;
+  width: 404.7px;
   margin: 0 auto;
   *zoom: 1;
 }
@@ -582,6 +778,21 @@ body {
 .gbwedding-image-wrap:after {
   clear: both;
 }
+.gbwedding-contentbg h2,
+.gbwedding-contentbg h4 {
+  font-family: metaserif;
+  font-weight: normal;
+  padding: 0 80px;
+  font-size: 2.1rem;
+  font-size: 21px;
+}
+.gbwedding-contentbg h5 {
+  font-family: metaserif;
+  font-weight: normal;
+  padding: 0 95px;
+  font-size: 1.8rem;
+  font-size: 18px;
+}
 .icon {
   text-indent: -9999px;
   opacity: .9;
@@ -590,7 +801,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   background-image: url(images/sprite.png);
-  background-position: -1650px -645px;
+  background-position: -2591px -1211px;
   width: 429px;
   height: 126px;
 }
@@ -599,7 +810,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   background-image: url(images/sprite.png);
-  background-position: -805px -421px;
+  background-position: -1229px -845px;
   width: 191px;
   height: 87px;
 }

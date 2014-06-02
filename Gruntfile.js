@@ -157,7 +157,7 @@ module.exports = function( grunt ) {
                 cssFormat: 'less',
                 imgPath: 'images/sprite.png',
                 algorithm: 'diagonal',
-                padding: 20
+                padding: 40
             }
         }
 	});
