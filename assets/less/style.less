@@ -23,6 +23,11 @@ body {
 	font-family: @font-base;
 }
 
+p {
+	line-height: 1.5em;
+	margin-top: auto;
+}
+
 .head {
 
 	&_title {
@@ -168,7 +173,6 @@ body {
 		color: @body-text-color;
 		font-family: @menu-font;
 		padding: 0 87px;
-		margin-bottom: 46px;
 		.font-size(@base-size-sm);
 	}
 
@@ -195,7 +199,7 @@ body {
 			padding: 0;
 			text-align: left;
 			margin: 0;
-			.font-size(@base-size-sm1);
+			.font-size(@base-size-sm);
 		}
 
 		h3 {
@@ -203,7 +207,7 @@ body {
 			margin-bottom: 13px;
 			margin-top: 20px;
 			font-weight: normal;
-			.font-size(@base-font-size);
+			.font-size(@base-size-sm);
 		}
 
 		.item_descr {
@@ -217,23 +221,176 @@ body {
 		}
 	}
 
-	.field_text {
+
+#rsvp {
+	padding-left: 22px;
+
+	&Form {
+		margin-bottom: 25px;
+
+		br {
+			display: none;
+		}
+		
+		p:nth-child(5) {
+			display: block;
+			text-align: center;
+		}
+	}
+}
+
+.rsvpAdditionalAttendeeQuestions {
+	margin-bottom: 20px;
+}	
+	.rsvp {
+
+		&-more {
+			.rsvpParagraph {
+				text-align: center;
+				padding: 0 65px;
+				.font-size(@base-size-h4);
+			}
+		}
+
+		&-attend {
+
+			&-wrap {
+				padding-top: 9px;
+				background-position: -2055px -1129px;
+				margin-bottom: 20px;
+				.sprite-image(@radio-bg);
+			}
+
+			&-label {
+				font-family: @sub-heading-font;
+				display: inline-block;
+				margin-bottom: 30px;
+				.font-size(@base-font-size);
+
+				&-yes {
+					margin-right: 10px;
+				}
+
+				&-no {
+					margin-left: 10px;
+				}
+			}
+		}
+
+		&-btn-wrap {
+			margin: 0 auto;
+			.row(2.3);
+		}
+
+		&-edit-wrap {
+			
+		}
+
+		&-first-name {
+			font-family: @header-font;
+			margin-bottom: 0;
+			.font-size(@base-size-lg);
+		}
+
+		&-associated {
+
+			&-note {
+				margin-bottom: 20px;
+			}
+
+			&-attending-question {
+				margin-bottom: 0;
+				.font-size(@base-size-h5);
+			}
+
+			&-still-name {
+				color: @links;
+			}
+
+			&-radio {
+				display: inline-block;
+				padding: 0;
+				margin-right: 15px;
+			}
+		}
+
+		&-already-registered {
+			font-family: @menu-font;
+
+			&-name {
+				color: @links;
+			}
+		}
+
+		&-error {
+			color: red;
+			text-transform: uppercase;
+			text-align: left;
+			position: relative;
+			margin-bottom: 20px;
+			.font-size(@base-size-sm1);
+
+			/*&:before {
+				background-color: red;
+				padding: 10px 15px;
+				border-radius: 35px;
+				color: @white;
+				font-weight: bold;
+				text-shadow: 0 0 6px @black;
+				box-shadow: inset 1px 1px 3px #000, inset -1px -1px 0;
+				margin-right: 20px;
+				position: absolute;
+				.font-size(@base-size-med);
+				.inject("!");
+			}*/
+		}
+
+		&-suggested {
+
+			&-btn {
+				display: inline-block;
+				margin-top: 20px;
+			}
+
+			&-name {
+				display: block;
+			}
+		}
+
+		&-already-note {
+			.font-size(@base-size-h4);
+		}
+
+		&-question-heading {
+			margin-bottom: 10px;
+		}
+
+		&-welcome-note {
+			.font-size(@base-size-h4);
+		}
+
+		&-thankyou-message {
+			margin-top: 0;
+		}
+	}
+
+	.rsvpParagraph {
 		text-align: left;
 		display: inline-block;
 		margin-bottom: 18px;
+		padding: 0;
 
-		.label_title {
-			display: block;
+		label {
 			font-family: @sub-heading-font;
 			text-transform: uppercase;
-			margin-bottom: 7px;
+			margin-bottom: -12px;
 			.font-size(@base-font-size);
 		}
 
-		.inputtext {
+		input {
 			border-radius: 4px;
 			border: none;
-			margin-right: 33px;
+			margin-right: 15px;
 			padding: 10px 5px;
 			background-color: @input-bg;
 			font-family: @menu-font;
@@ -243,6 +400,12 @@ body {
 			&:focus {
 				background-color: @white;
 				outline: 0;
+			}
+
+			&.btn-submit {
+				background-color: transparent;
+				padding-top: 8px;
+				font-family: @sub-heading-font;
 			}
 		}
 
@@ -322,18 +485,18 @@ body {
 		&:before,
 		&:after {
 			position: absolute;
-			top: 20px;
+			top: 17px;
 		}
 
 		&:before {
 			content: '';
-			left: 186px;
+			left: 125px;
 			.sprite(@fork);
 		}
 
 		&:after {
 			content: '';
-			right: 183px;
+			right: 127px;
 			.sprite(@spoon);
 		}
 	}
@@ -342,7 +505,7 @@ body {
 		text-transform: uppercase;
 		font-family: @sub-heading-font;
 		text-align: center;
-		padding-top: 9px;
+		padding-top: 3px;
 		margin-top: 25px;
 		text-shadow: 0 0 1px @black;
 		.marginauto();
@@ -358,7 +521,7 @@ body {
 		text-transform: uppercase;
 		text-align: center;
 		padding-top: 60px;
-		margin-top: -65px;
+		margin-top: -40px;
 		.marginauto();
 		.font-size(@base-size-lg);
 		.sprite(@date-banner);
@@ -453,6 +616,7 @@ body {
 
 			.gbwedding-ribbon-btn-wrap {
 				margin-bottom: 8px;
+				margin-top: 20px;
 			}
 		}
 
@@ -467,7 +631,7 @@ body {
 				font-family: @sub-heading-font;
 				padding-right: 0;
 				padding-left: 50px;
-				padding-top: 17px;
+				padding-top: 28px;
 				margin-bottom: 28px;
 				.font-size(@base-font-size);
 			}
@@ -489,7 +653,7 @@ body {
 				font-family: @sub-heading-font;
 				padding-right: 0;
 				padding-left: 75px;
-				padding-top: 17px;
+				padding-top: 26px;
 				margin-bottom: 28px;
 				.font-size(@base-font-size);
 			}
@@ -507,7 +671,7 @@ body {
 			display: block;
 			text-decoration: none;
 			text-align: center;
-			padding-top: 8px;
+			padding-top: 2px;
 			text-shadow: 0 0 1px @black;
 			margin-top: -5px;
 			color: @button-text-color;

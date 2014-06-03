@@ -216,6 +216,10 @@ html {
 body {
   font-family: Verdana, Arial, sans-serif;
 }
+p {
+  line-height: 1.5em;
+  margin-top: auto;
+}
 .head_title {
   position: relative;
 }
@@ -379,7 +383,6 @@ body {
   color: #d7dfd2;
   font-family: metaserif;
   padding: 0 87px;
-  margin-bottom: 46px;
   font-size: 1.5rem;
   font-size: 15px;
 }
@@ -423,8 +426,8 @@ body {
   padding: 0;
   text-align: left;
   margin: 0;
-  font-size: 1.4rem;
-  font-size: 14px;
+  font-size: 1.5rem;
+  font-size: 15px;
 }
 .main_mid .hotel-item h3,
 .main_mid .bot_box h3 {
@@ -432,8 +435,8 @@ body {
   margin-bottom: 13px;
   margin-top: 20px;
   font-weight: normal;
-  font-size: 1.2rem;
-  font-size: 12px;
+  font-size: 1.5rem;
+  font-size: 15px;
 }
 .main_mid .hotel-item .item_descr,
 .main_mid .bot_box .item_descr {
@@ -445,23 +448,149 @@ body {
   text-decoration: none;
   color: #da6055;
 }
-.main_mid .field_text {
-  text-align: left;
-  display: inline-block;
-  margin-bottom: 18px;
+.main_mid #rsvp {
+  padding-left: 22px;
 }
-.main_mid .field_text .label_title {
+.main_mid #rsvpForm {
+  margin-bottom: 25px;
+}
+.main_mid #rsvpForm br {
+  display: none;
+}
+.main_mid #rsvpForm p:nth-child(5) {
   display: block;
+  text-align: center;
+}
+.main_mid .rsvpAdditionalAttendeeQuestions {
+  margin-bottom: 20px;
+}
+.main_mid .rsvp-more .rsvpParagraph {
+  text-align: center;
+  padding: 0 65px;
+  font-size: 2.1rem;
+  font-size: 21px;
+}
+.main_mid .rsvp-attend-wrap {
+  padding-top: 9px;
+  background-position: -2055px -1129px;
+  margin-bottom: 20px;
+  background-image: url(images/sprite.png);
+}
+.main_mid .rsvp-attend-label {
   font-family: haymaker;
-  text-transform: uppercase;
-  margin-bottom: 7px;
+  display: inline-block;
+  margin-bottom: 30px;
   font-size: 1.2rem;
   font-size: 12px;
 }
-.main_mid .field_text .inputtext {
+.main_mid .rsvp-attend-label-yes {
+  margin-right: 10px;
+}
+.main_mid .rsvp-attend-label-no {
+  margin-left: 10px;
+}
+.main_mid .rsvp-btn-wrap {
+  width: 131.1px;
+  margin: 0 auto;
+  *zoom: 1;
+}
+.main_mid .rsvp-btn-wrap:before,
+.main_mid .rsvp-btn-wrap:after {
+  content: "";
+  display: table;
+}
+.main_mid .rsvp-btn-wrap:after {
+  clear: both;
+}
+.main_mid .rsvp-first-name {
+  font-family: lavanderia;
+  margin-bottom: 0;
+  font-size: 3.9rem;
+  font-size: 39px;
+}
+.main_mid .rsvp-associated-note {
+  margin-bottom: 20px;
+}
+.main_mid .rsvp-associated-attending-question {
+  margin-bottom: 0;
+  font-size: 1.8rem;
+  font-size: 18px;
+}
+.main_mid .rsvp-associated-still-name {
+  color: #da6055;
+}
+.main_mid .rsvp-associated-radio {
+  display: inline-block;
+  padding: 0;
+  margin-right: 15px;
+}
+.main_mid .rsvp-already-registered {
+  font-family: metaserif;
+}
+.main_mid .rsvp-already-registered-name {
+  color: #da6055;
+}
+.main_mid .rsvp-error {
+  color: red;
+  text-transform: uppercase;
+  text-align: left;
+  position: relative;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  font-size: 14px;
+  /*&:before {
+				background-color: red;
+				padding: 10px 15px;
+				border-radius: 35px;
+				color: @white;
+				font-weight: bold;
+				text-shadow: 0 0 6px @black;
+				box-shadow: inset 1px 1px 3px #000, inset -1px -1px 0;
+				margin-right: 20px;
+				position: absolute;
+				.font-size(@base-size-med);
+				.inject("!");
+			}*/
+
+}
+.main_mid .rsvp-suggested-btn {
+  display: inline-block;
+  margin-top: 20px;
+}
+.main_mid .rsvp-suggested-name {
+  display: block;
+}
+.main_mid .rsvp-already-note {
+  font-size: 2.1rem;
+  font-size: 21px;
+}
+.main_mid .rsvp-question-heading {
+  margin-bottom: 10px;
+}
+.main_mid .rsvp-welcome-note {
+  font-size: 2.1rem;
+  font-size: 21px;
+}
+.main_mid .rsvp-thankyou-message {
+  margin-top: 0;
+}
+.main_mid .rsvpParagraph {
+  text-align: left;
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 0;
+}
+.main_mid .rsvpParagraph label {
+  font-family: haymaker;
+  text-transform: uppercase;
+  margin-bottom: -12px;
+  font-size: 1.2rem;
+  font-size: 12px;
+}
+.main_mid .rsvpParagraph input {
   border-radius: 4px;
   border: none;
-  margin-right: 33px;
+  margin-right: 15px;
   padding: 10px 5px;
   background-color: #d7dfd2;
   font-family: metaserif;
@@ -469,17 +598,22 @@ body {
   -webkit-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
 }
-.main_mid .field_text .inputtext:focus {
+.main_mid .rsvpParagraph input:focus {
   background-color: #ffffff;
   outline: 0;
 }
-.main_mid .field_text .custom-radio {
+.main_mid .rsvpParagraph input.btn-submit {
+  background-color: transparent;
+  padding-top: 8px;
+  font-family: haymaker;
+}
+.main_mid .rsvpParagraph .custom-radio {
   margin-right: 25px;
 }
-.main_mid .field_text .custom-radio input {
+.main_mid .rsvpParagraph .custom-radio input {
   display: none;
 }
-.main_mid .field_text .custom-radio label {
+.main_mid .rsvpParagraph .custom-radio label {
   font-family: haymaker;
   background-position: 0 0;
   cursor: pointer;
@@ -487,14 +621,14 @@ body {
   font-size: 1.2rem;
   font-size: 12px;
 }
-.main_mid .field_text .custom-radio label.checked {
+.main_mid .rsvpParagraph .custom-radio label.checked {
   background-position: -59px -59px;
   background-image: url(images/sprite.png);
 }
-.main_mid .field_text .rowRadio {
+.main_mid .rsvpParagraph .rowRadio {
   display: inline-block;
 }
-.main_mid .field_text .input_styled {
+.main_mid .rsvpParagraph .input_styled {
   text-align: center;
   background-position: -1953px -983px;
   padding-top: 10px;
@@ -551,11 +685,11 @@ body {
 .gbwedding-eatdrink:before,
 .gbwedding-eatdrink:after {
   position: absolute;
-  top: 20px;
+  top: 17px;
 }
 .gbwedding-eatdrink:before {
   content: '';
-  left: 186px;
+  left: 125px;
   background-image: url(images/sprite.png);
   background-position: -118px -118px;
   width: 47px;
@@ -563,7 +697,7 @@ body {
 }
 .gbwedding-eatdrink:after {
   content: '';
-  right: 183px;
+  right: 127px;
   background-image: url(images/sprite.png);
   background-position: -205px -166px;
   width: 48px;
@@ -573,7 +707,7 @@ body {
   text-transform: uppercase;
   font-family: haymaker;
   text-align: center;
-  padding-top: 9px;
+  padding-top: 3px;
   margin-top: 25px;
   text-shadow: 0 0 1px #000000;
   margin-left: auto;
@@ -593,7 +727,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   padding-top: 60px;
-  margin-top: -65px;
+  margin-top: -40px;
   margin-left: auto;
   margin-right: auto;
   font-size: 3.9rem;
@@ -705,6 +839,7 @@ body {
 }
 .gbwedding-page-bottom-wedding .gbwedding-ribbon-btn-wrap {
   margin-bottom: 8px;
+  margin-top: 20px;
 }
 .gbwedding-page-bottom-rsvp {
   padding-top: 0;
@@ -716,7 +851,7 @@ body {
   font-family: haymaker;
   padding-right: 0;
   padding-left: 50px;
-  padding-top: 17px;
+  padding-top: 28px;
   margin-bottom: 28px;
   font-size: 1.2rem;
   font-size: 12px;
@@ -735,7 +870,7 @@ body {
   font-family: haymaker;
   padding-right: 0;
   padding-left: 75px;
-  padding-top: 17px;
+  padding-top: 26px;
   margin-bottom: 28px;
   font-size: 1.2rem;
   font-size: 12px;
@@ -748,7 +883,7 @@ body {
   display: block;
   text-decoration: none;
   text-align: center;
-  padding-top: 8px;
+  padding-top: 2px;
   text-shadow: 0 0 1px #000000;
   margin-top: -5px;
   color: #13001f;
