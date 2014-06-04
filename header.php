@@ -35,7 +35,7 @@
         if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' );
         tfuse_head();
         wp_head(); ?>
-    <?php  tfuse_phone_style(); ?>
+    <!--<?php  tfuse_phone_style(); ?>-->
 </head>
 <body
     <?php tfuse_bk_style(); echo ' '; body_class(); ?>>

@@ -310,6 +310,9 @@ p {
 .menu-menu-container:after {
   clear: both;
 }
+.current_page_item {
+  background-color: rgba(255, 255, 255, 0.5);
+}
 .menu-item {
   list-style: none;
   display: inline-block;
@@ -317,7 +320,6 @@ p {
   text-decoration: none;
   font-family: metaserif;
   padding: 10px 15px;
-  background-color: rgba(255, 255, 255, 0);
   font-size: 1.4rem;
   font-size: 14px;
   -webkit-transition: all ease-in 0.2s;
@@ -689,7 +691,7 @@ p {
 }
 .gbwedding-eatdrink:before {
   content: '';
-  left: 125px;
+  left: 95px;
   background-image: url(images/sprite.png);
   background-position: -118px -118px;
   width: 47px;
@@ -697,7 +699,7 @@ p {
 }
 .gbwedding-eatdrink:after {
   content: '';
-  right: 127px;
+  right: 90px;
   background-image: url(images/sprite.png);
   background-position: -205px -166px;
   width: 48px;
@@ -901,7 +903,12 @@ p {
   margin-right: auto;
 }
 .gbwedding-image-wrap {
-  width: 404.7px;
+  background-image: url(images/featured-image-bg.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 165px;
+  width: 440.61px;
   margin: 0 auto;
   *zoom: 1;
 }
@@ -912,6 +919,32 @@ p {
 }
 .gbwedding-image-wrap:after {
   clear: both;
+}
+.gbwedding-image-wrap:before,
+.gbwedding-image-wrap:after {
+  width: 443px;
+  height: 59px;
+  background-image: url(images/featured-image-corners.png);
+  position: absolute;
+  z-index: 1;
+  left: 2px;
+  content: "";
+  display: inline-block;
+}
+.gbwedding-image-wrap:before {
+  top: -11px;
+}
+.gbwedding-image-wrap:after {
+  bottom: -15px;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.gbwedding-image-wrap img {
+  position: absolute;
+  top: 2px;
+  left: 21px;
+  clip: rect(3px, 396px, 155px, 4px);
 }
 .gbwedding-contentbg h2,
 .gbwedding-contentbg h4 {
@@ -948,6 +981,26 @@ p {
   background-position: -1229px -845px;
   width: 191px;
   height: 87px;
+}
+.registry-name {
+  position: absolute;
+  bottom: -20px;
+}
+.registry-shop-wrap {
+  background-color: #d7dfd2;
+  padding: 6px 0;
+  border-radius: 100%;
+  height: 102px;
+  width: 21.333333333333336%;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
+  vertical-align: top;
+}
+.registry-shop-wrap .row {
+  padding-top: 40px;
 }
 .char21,
 .char22 {

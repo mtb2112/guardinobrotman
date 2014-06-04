@@ -107,6 +107,10 @@ p {
 	.bordered(1px, dashed, @black);
 }
 
+.current_page_item {
+	background-color: rgba(255, 255, 255, .5);
+}
+
 .menu-item {
 		list-style: none;
 		display: inline-block;
@@ -114,7 +118,6 @@ p {
 		text-decoration: none;
 		font-family: @menu-font;
 		padding: 10px 15px;
-		background-color: rgba(255, 255, 255, 0);
 		.font-size(@base-size-sm1);
 		.transition(all, ease-in, .2s);
 
@@ -490,13 +493,13 @@ p {
 
 		&:before {
 			content: '';
-			left: 125px;
+			left: 95px;
 			.sprite(@fork);
 		}
 
 		&:after {
 			content: '';
-			right: 127px;
+			right: 90px;
 			.sprite(@spoon);
 		}
 	}
@@ -687,7 +690,40 @@ p {
 	}
 
 	&-image-wrap {
-		.row(7.1);
+		background-image: url(images/featured-image-bg.jpg);
+		background-position: top center;
+		background-repeat: no-repeat;
+		position: relative;
+		height: 165px;
+		.row(7.73);
+
+		&:before,
+		&:after {
+			width: 443px;
+			height: 59px;
+			background-image: url(images/featured-image-corners.png);
+			position: absolute;
+			z-index: 1;
+			left: 2px;
+			.inject("");
+		}
+
+		&:before {
+			top: -11px;
+		}
+
+		&:after {
+			bottom: -15px;
+			.rotate(180deg);
+		}
+
+
+		img {
+			position: absolute;
+			top: 2px;
+			left: 21px;
+			clip: rect(3px, 396px, 155px, 4px);
+		}
 	}
 
 	&-contentbg {
@@ -724,6 +760,37 @@ p {
 		.sprite(@wedding-badge);
 	}
 }
+
+.registry {
+
+	&-image {
+
+	}
+
+	&-name {
+		position: absolute;
+		bottom: -20px
+	}
+
+	&-shop-wrap {
+		background-color: @body-text-color;
+		padding: 6px 0;
+		border-radius: 100%;
+		height: 102px;
+		width: 100% / 3 - 12px;
+		position: relative;
+		display: inline-block;
+		margin-bottom: 60px;
+		margin-left: 10px;
+		margin-right: 10px;
+		vertical-align: top;
+
+		.row {
+			padding-top: 40px;
+		}
+	}
+}
+
 
 .char21,
 .char22 {
