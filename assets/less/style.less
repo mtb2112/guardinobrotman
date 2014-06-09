@@ -14,6 +14,7 @@ Template: just-married-parent
 @import 'variables/_variables';
 @import '_sprite';
 
+
 html {
 	background: url('images/src/wood-bg.jpg') no-repeat center center fixed;
 	background-size: cover;
@@ -23,32 +24,33 @@ body {
 	font-family: @font-base;
 }
 
-p {
+p,
+h3 {
 	line-height: 1.5em;
 	margin-top: auto;
 }
 
 .head {
 
+	&_names {
+		font-family: @header-font;
+		text-shadow: -1px -1px 1px @black;
+		color: multiply(@heading-color, @black);
+		text-align: center;
+		position: relative;
+		.fade;
+	}
+
 	&_title {
 		position: relative;
 
 		&:before,
 		&:after {
-			content: '';
+			zoom: 1;
 			position: absolute;
 			bottom: 20px;
+			.inject();
 			.sprite(@heart);
-		}
-
-		&:before {
-			left: 134px;
-			.rotate(-13deg);
-		}
-
-		&:after {
-			right: 134px;
-			.rotate(13deg);
 		}
 	}
 
@@ -57,39 +59,19 @@ p {
 		text-shadow: -1px -1px 1px @black;
 		color: multiply(@heading-color, @black);
 		text-align: center;
-		margin-top: -30px;
 		position: relative;
 		.fade;
-		.font-size(@base-size-h1);
+
 
 		&_first,
 		&_amp {
 			font-weight: bold;
 		}
 
-		&_left,
-		&_right {
-			position: relative;
-			display: inline-block;
-		}
-
 		&_last {
 			font-family: @sub-heading-font;
 			position: absolute;
 			bottom: 37px;
-			.font-size(@base-size-h3);
-		}
-
-		&_left {
-			.head_names_last {
-			right: 34px;
-			}
-		}
-
-		&_right {
-			.head_names_last {
-				right: 22px;
-			}
 		}
 	}
 }
@@ -98,7 +80,6 @@ p {
 	background-color: @menu-bg-color;
 	text-align: center;
 	padding: 0;
-	.row(8.4);
 }
 
 .menu-menu-container {
@@ -132,11 +113,12 @@ p {
 	}
 
 .main_outer {
-	.row(10);
+	
 }
 
 .main_mid {
 	background: url('images/content-bg.png');
+	background-size: 200%;
 	position: relative;
 	text-shadow: 1px 1px 1px @black;
 	color: @body-text-color;
@@ -148,19 +130,15 @@ p {
 	&:before,
 	&:after {
 		content:'';
-		background: url('images/content-bg.png') -570px 0 no-repeat;
+		background: url('images/content-bg.png');
+		background-repeat: no-repeat;
+		background-size: 200%;
 		height: 37px;
-		width: 570px;
-		display: block;
 		position: absolute;
-	}
-
-	&:before {
-		top: -37px;
+		display: block;
 	}
 
 	&:after {
-		bottom: -37px;
 		.rotate(180deg);
 	}
 
@@ -168,33 +146,24 @@ p {
 		font-family: @header-font;
 		font-weight: normal;
 		text-align: center;
-		.font-size(@base-size-h2);
 	}
 
 	p {
 		text-align: center;
 		color: @body-text-color;
 		font-family: @menu-font;
-		padding: 0 87px;
-		.font-size(@base-size-sm);
 	}
 
 	.hotel-item,
 	.bot_box {
 		position: relative;
 		text-align: left;
-		background-position: -158px -406px;
 		.bordered(1px, solid, @black);
-		.row(7.6);
-		.sprite-image(@map-icon);
 
 			&:after {
-			content: '';
 			position: absolute;
-			//left: calc(~"50% - 49px");
-			left: 50% - 9.8;
-			bottom: -55px;
-			color: @button-text-color;
+			zoom: 1;
+			.inject();
 			.sprite(@bottom-flourish);
 		}
 
@@ -202,20 +171,23 @@ p {
 			padding: 0;
 			text-align: left;
 			margin: 0;
-			.font-size(@base-size-sm);
 		}
 
 		h3 {
 			font-family: @sub-heading-font;
 			margin-bottom: 13px;
-			margin-top: 20px;
 			font-weight: normal;
-			.font-size(@base-size-sm);
+
+			&:before {
+				position: absolute;
+				zoom: 1;
+				.inject();
+				.sprite(@map-icon);
+			}
 		}
 
 		.item_descr {
-			padding-right: 100px;
-			margin-bottom: 20px;
+			margin-bottom: 5px;
 		}
 
 		a {
@@ -259,7 +231,7 @@ p {
 
 			&-wrap {
 				padding-top: 9px;
-				background-position: -2055px -1129px;
+				background-position: 79px -641px;
 				margin-bottom: 20px;
 				.sprite-image(@radio-bg);
 			}
@@ -375,13 +347,19 @@ p {
 		&-thankyou-message {
 			margin-top: 0;
 		}
+
+		&-btn {
+			display: block;
+			margin: 0 auto;
+		}
 	}
 
-	.rsvpParagraph {
+	.rsvp-input-wrap {
 		text-align: left;
 		display: inline-block;
 		margin-bottom: 18px;
 		padding: 0;
+		width: 100% / 2;
 
 		label {
 			font-family: @sub-heading-font;
@@ -479,11 +457,9 @@ p {
 		text-align: center;
 		color: multiply(@heading-color, @black);
 		text-shadow: -1px -1px 1px @black;
-		margin-top: -15px;
 		position: relative;
 		font-weight: bold;
 		.fade;
-		.font-size(@base-size-med);
 
 		&:before,
 		&:after {
@@ -509,12 +485,11 @@ p {
 		font-family: @sub-heading-font;
 		text-align: center;
 		padding-top: 3px;
-		margin-top: 25px;
 		text-shadow: 0 0 1px @black;
-		.marginauto();
-		.font-size(@base-size-h3);
-		.fade();
+		.transform(scale(1));
 		.sprite(@border-bg);
+		.marginauto();
+		.fade();
 	}
 
 	&-date {
@@ -523,17 +498,17 @@ p {
 		color: multiply(@heading-color, @black);
 		text-transform: uppercase;
 		text-align: center;
-		padding-top: 60px;
-		margin-top: -40px;
-		.marginauto();
-		.font-size(@base-size-lg);
 		.sprite(@date-banner);
+		.marginauto();
+
+		span {
+			margin-top: 31px;
+		}
 	}
 
 	&-rsvp {
 		text-align: center;
 		padding-top: 20px;
-		margin-top: -36px;
 		position: relative;
 		.marginauto();
 		
@@ -591,30 +566,32 @@ p {
 		position: relative;
 		padding-top: 20px;
 		.bordered(1px, solid, @black);
-		.row(7.14);
 
 		h1 {
 			font-family: @sub-heading-font;
 			margin: 0;
-			.font-size(@base-size-sm);
 		}
 
 		&:after {
 			content: '';
 			position: absolute;
 			//left: calc(~"50% - 49px");
-			left: 50% - 9.8;
 			bottom: -55px;
 			color: @button-text-color;
 			.sprite(@bottom-flourish);
 		}
 
 		&-wedding {
-			background-position: -504px -422px;
-			.sprite-image(@map-icon);
 
 			h1 {
-				padding-left: 70px;
+				position: relative;
+
+				&:before {
+					position: absolute;
+					zoom: 1;
+					.sprite(@map-icon);
+					.inject();
+				}
 			}
 
 			.gbwedding-ribbon-btn-wrap {
@@ -626,7 +603,7 @@ p {
 		&-rsvp {
 			
 			padding-top: 0;
-			background-position: -283px -198px;
+			background-position: 8px -323px;
 			.sprite-image(@gift-icon);
 
 			p {
@@ -648,7 +625,7 @@ p {
 		&-registry {
 
 			padding-top: 0;
-			background-position: -345px -272px;
+			background-position: 19px -399px;
 			.sprite-image(@check-icon);
 
 			p {
@@ -682,7 +659,6 @@ p {
 			.font-size(@base-font-size);
 
 			&-wrap {
-				width: 90px;
 				margin-bottom: 3px;
 				.marginauto();
 			}
@@ -694,8 +670,6 @@ p {
 		background-position: top center;
 		background-repeat: no-repeat;
 		position: relative;
-		height: 165px;
-		.row(7.73);
 
 		&:before,
 		&:after {
@@ -721,8 +695,6 @@ p {
 		img {
 			position: absolute;
 			top: 2px;
-			left: 21px;
-			clip: rect(3px, 396px, 155px, 4px);
 		}
 	}
 
@@ -732,8 +704,6 @@ p {
 			h4 {
 				font-family: @menu-font;
 				font-weight: normal;
-				padding: 0 80px;
-				.font-size(@base-size-h4);
 			}
 
 			h5 {
@@ -750,12 +720,12 @@ p {
 	opacity: .9;
 
 	&-invited-banner {
-		.marginauto();
 		.sprite(@invited-banner);
+		.marginauto();
 	}
 
 	&-wedding-badge {
-		margin-top: -30px;
+		zoom: 1;
 		.marginauto();
 		.sprite(@wedding-badge);
 	}
@@ -795,5 +765,6 @@ p {
 .char21,
 .char22 {
 	vertical-align: super;
-	.font-size(@base-size-h3);
 }
+
+@import '_media';

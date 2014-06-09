@@ -156,7 +156,7 @@ module.exports = function( grunt ) {
                 destCSS: 'assets/less/_sprite.less',
                 cssFormat: 'less',
                 imgPath: 'images/sprite.png',
-                algorithm: 'diagonal',
+                algorithm: 'top-down',
                 padding: 40
             }
         }

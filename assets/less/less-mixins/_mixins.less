@@ -35,7 +35,29 @@
 	transition: @arguments;
 }
 
+.transform(...) {
+	transform: @arguments;
+	-ms-transform: @arguments;
+	-webkit-transform: @arguments;
+}
+
 .inject( @content: "" ) {
  content: @content;
  display: inline-block;
+}
+
+.x {
+	display: none;
+}
+
+.bs (@auto: auto, @size ) {
+ @rem: ( @size / 10 );
+ background-size : @auto ~"@{rem}rem";
+ background-size : @auto @size * 1em;
+}
+
+.rotatescale (...) {
+	transform: @arguments;
+	-ms-transform: @arguments;
+	-webkit-transform: @arguments;
 }

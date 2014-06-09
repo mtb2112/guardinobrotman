@@ -1,0 +1,558 @@
+@import 'semantic-grid/stylesheets/less/_grid';
+@import 'less-mixins/_mixins';
+@import 'variables/_variables';
+
+// 320px--------------------------------------------------------------------------
+@media only screen and ( min-width: 320px ) {
+
+	.main_outer {
+		.row(5);
+	}
+
+	#menu-menu {
+		.row(5);
+	}
+
+	.menu-menu-container {
+		.row(5);
+	}
+
+	.icon {
+
+		&-invited-banner {
+			zoom: .67;
+			margin-top: -10px;
+			.transform(scale(.7));
+		}
+
+		&-wedding-badge {
+			margin-top: -45px;
+			.transform(scale(.7));
+		}
+	}
+
+	.head {
+
+		&_names {
+			margin-top: -35px;
+			.font-size(@base-size-mb-h1);
+
+			&_left,
+			&_right {
+				position: relative;
+			}
+
+			&_left {
+
+				margin-bottom: 15px;
+
+				.head_names_last {
+					right: 75px;
+				}
+			}
+
+			&_right {
+				.head_names_last {
+					right: 75px;
+				}
+			}
+
+			&_last {
+				bottom: 22px;
+				.font-size(@base-size-sm);
+			}
+
+			&_amp {
+				position: absolute;
+				top: 84px;
+				.font-size(@base-size-lg);
+			}
+		}
+
+		&_title {
+			
+			.row (5);
+
+			:before,
+			:after {
+				.transform(scale(.7));
+			}
+
+			&:before {
+				left: 40px;
+				.rotatescale(rotate(-13deg), scale(.5));
+			}
+
+			&:after {
+				right: 40px;
+				.rotatescale(rotate(13deg), scale(.5));
+			}
+		}
+	}
+
+	.main_mid {
+
+		&:before,
+		&:after {
+			background-position: -285px 0;
+			.row(5);
+		}
+
+		&:before {
+			top: -18px;
+		}
+
+		&:after {
+			bottom: -18px;
+		}
+
+		p {
+			padding: 0 33px;
+			.font-size(@base-font-size);
+		}
+
+		h1 {
+			.font-size(@base-size-mb-h2);
+		}
+
+		.hotel-item {
+			.row(4.2);
+
+			h3 {
+				text-align: center;
+				margin-top: 38px;
+				.font-size(@base-font-size);
+
+				a {
+					display: block;
+				}
+
+				&:before {
+					right: 94px;
+					top: -8px;
+					.transform(scale(.5));
+				}
+			}
+
+			p {
+				.font-size(@base-font-size);
+			}
+
+			.item_descr {
+				padding-right: 0;
+			}
+
+			&:after {
+				left: 39% - 9.8;
+				bottom: -40px;
+				.transform(scale(.7));
+			}
+		}
+	}
+
+		.gbwedding {
+
+		&-rsvp {
+
+			&:before,
+			&:after {
+				display: none;
+			}
+		}
+
+		&-location {
+			margin-top: 10px;
+			zoom: .8;
+			.font-size(@base-size-h5);
+		}
+
+		&-eatdrink {
+			
+			margin-top: -10px;
+			.font-size(@base-size-h4);
+
+			&:before,
+			&:after {
+				display: none;
+			}
+		}
+
+		&-date {
+			padding-top: 25px;
+			margin-top: -50px;
+			zoom: .5;
+			.transform(scale(.9));
+			.font-size(@base-size-h2);
+		}
+
+		&-rsvp {
+			margin-top: 0;
+		}
+
+		&-image-wrap {
+			height: 94px;
+			.row(3.85);
+
+			img {
+				clip: rect(1px, 215px, 89px, 5px);
+				left: 0;
+				height: auto;
+				.column(3.85);
+			}
+
+			&:before,
+			&:after {
+				display: none;
+			}
+		}
+
+		&-ribbon {
+
+				&-btn {
+
+					&-wrap {
+						width: 131px;
+					}
+				}
+			}
+
+		&-page-bottom {
+		
+			.row(4.2);
+		
+			h1 {
+				padding-left: 0;
+				.font-size(@base-font-size);
+			}
+
+			&:after {
+				left: 38% - 9.8;
+			}
+
+			&-wedding {
+				
+				h1 {
+					
+					padding-top: 25px;
+
+					&:before {
+						.transform(scale(.5));
+						top: -25px;
+						left: 90px;
+					}
+				}
+			}
+		}
+
+		&-contentbg {
+			
+			h2,
+			h4 {
+				padding: 0 35px;
+				.font-size(@base-size-h5);
+			}
+		}
+	}
+
+	.char21,
+	.char22 {
+		.font-size(@base-size-sm1);
+	}
+}
+
+
+// 480px--------------------------------------------------------------------------
+@media only screen and ( min-width: 480px ) {
+
+	.main_outer {
+		.row(7);
+	}
+
+	.head {
+		&_names {
+
+			&_left {
+
+				.head_names_last {
+					right: 106px;
+				}
+			}
+
+			&_right {
+
+				.head_names_last {
+					right: 106px;
+				}
+			}
+		}
+	}
+}
+
+// 640px--------------------------------------------------------------------------
+@media only screen and ( min-width: 640px ) {
+
+	.main_outer {
+		.row(10);
+	}
+
+	#menu-menu {
+		.row(8.4);
+	}
+
+	.menu-menu-container {
+		.row(8.4);
+	}
+
+	.icon {
+
+		&-invited-banner {
+			zoom: 1;
+			margin-top: 20px;
+			display: block;
+			.transform(scale(1));
+		}
+
+		&-wedding-badge {
+			display: block;
+			margin-top: -30px;
+			.transform(scale(1));
+		}
+	}
+
+	.head {
+
+		&_names {
+			margin-top: -30px;
+			.font-size(@base-size-h1);
+
+			&_left,
+			&_right {
+				position: relative;
+				display: inline-block;
+			}
+
+			&_last {
+				bottom: 37px;
+				.font-size(@base-size-h3);
+			}
+
+			&_left {
+
+				margin-bottom: 0;
+
+				.head_names_last {
+					right: 34px;
+				}
+			}
+
+			&_right {
+				.head_names_last {
+					right: 22px;
+				}
+			}
+
+			&_amp {
+				position: relative;
+				top: 0;
+				.font-size(@base-size-h1);
+			}
+		}
+
+		&_title {
+			
+			.row(10);
+
+			:before,
+			:after {
+				.transform(scale(1));
+			}
+
+			&:before {
+				left: 134px;
+				.rotatescale(rotate(-13deg), scale(1));
+			}
+
+			&:after {
+				right: 134px;
+				.rotatescale(rotate(13deg), scale(1));
+			}
+		}
+	}
+
+	.main_mid {
+
+		&:before,
+		&:after {
+			background-position: -570px 0;
+			.row(10);
+		}
+
+		&:before {
+			top: -37px;
+		}
+
+		&:after {
+			bottom: -37px;
+		}
+
+		h1 {
+			.font-size(@base-size-lg);
+		}
+
+		p {
+			padding: 0 87px;
+			.font-size(@base-size-sm);
+		}
+
+		.hotel-item {
+			.row(7.6);
+
+			h3 {
+				text-align: left;
+				position: relative;
+				margin-top: 10px;
+				.font-size(@base-size-sm);
+
+				a {
+					display: inline;
+				}
+
+				&:before {
+					right: 35px;
+					top: 25px;
+					.transform(scale(1));
+				}
+			}
+
+			p {
+				.font-size(@base-size-sm);
+			}
+
+			.item_descr {
+				padding-right: 100px;
+			}
+
+			&:after {
+				left: 50% - 9.8;
+				bottom: -55px;
+				.transform(scale(1));
+			}
+		}
+	}
+
+	.gbwedding {
+
+		&-rsvp {
+
+			&:before,
+			&:after {
+				display: block;
+			}
+		}
+
+		&-location {
+			margin-top: 25px;
+			zoom: 1;
+			.font-size(@base-size-h3);
+		}
+
+		&-eatdrink {
+			
+			margin-top: -15px;
+			.font-size(@base-size-med);
+
+			&:before,
+			&:after {
+				display: block;
+			}
+		}
+
+		&-date {
+			padding-top: 30px;
+			margin-top: -40px;
+			zoom: 1;
+			.font-size(@base-size-lg);
+			.transform(scale(1));
+		}
+
+		&-rsvp {
+			margin-top: -20px;
+		}
+
+		&-image-wrap {
+			height: 165px;
+			.row(7.73);
+
+			img {
+				left: 21px;
+				clip: rect(3px, 396px, 155px, 4px);
+				.column(7.1);
+
+			}
+
+			&:before,
+			&:after {
+				display: block;
+			}
+		}
+
+		&-ribbon {
+
+				&-btn {
+
+					&-wrap {
+						width: 90px;
+					}
+				}
+			}
+
+		&-page-bottom {
+			
+			.row(7.14);
+
+			h1 {
+				.font-size(@base-size-sm);
+			}
+
+			&:after {
+				left: 50% - 9.8;
+			}
+
+			&-wedding {
+
+				h1 {
+					
+					padding-top: 0;
+					padding-left: 50px;
+					
+
+					&:before {
+						.transform(scale(1));
+						top: -4px;
+						left: 15px;
+					}
+				}
+			}
+		}
+
+		&-contentbg {
+
+			h2,
+			h4 {
+				padding: 0 80px;
+				.font-size(@base-size-h4);
+			}
+		}
+	}
+
+	.char21,
+	.char22 {
+		.font-size(@base-size-h3);
+	}
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), 
+					(min--moz-device-pixel-ratio: 1.5), 
+					(min-resolution: 1.5dppx) {
+
+}

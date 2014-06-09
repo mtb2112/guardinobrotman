@@ -18,7 +18,7 @@
     <?php tfuse_meta(); ?>
     <link href="http://fonts.googleapis.com/css?family=Copse|Six+Caps|Source+Sans+Pro:400,700" rel="stylesheet">
     <!-- Mobile viewport optimized: h5bp.com/viewport -->
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
     <!-- favicon.ico and apple-touch-icon.png -->
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57-iphone.png">

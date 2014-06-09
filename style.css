@@ -7,6 +7,9 @@ Author: ThemeFuse
 Author URI: http://themefuse.com
 Template: just-married-parent
 */
+.x {
+  display: none;
+}
 article,
 aside,
 details,
@@ -189,6 +192,14 @@ body:after {
 body:after {
   clear: both;
 }
+body:before,
+body:after {
+  content: "";
+  display: table;
+}
+body:after {
+  clear: both;
+}
 /*
 LESS variables are information about icon's compiled state, stored under its original file name
 
@@ -216,83 +227,55 @@ html {
 body {
   font-family: Verdana, Arial, sans-serif;
 }
-p {
+p,
+h3 {
   line-height: 1.5em;
   margin-top: auto;
-}
-.head_title {
-  position: relative;
-}
-.head_title:before,
-.head_title:after {
-  content: '';
-  position: absolute;
-  bottom: 20px;
-  background-image: url(images/sprite.png);
-  background-position: -439px -362px;
-  width: 41px;
-  height: 36px;
-}
-.head_title:before {
-  left: 134px;
-  -webkit-transform: rotate(-13deg);
-  -ms-transform: rotate(-13deg);
-  transform: rotate(-13deg);
-}
-.head_title:after {
-  right: 134px;
-  -webkit-transform: rotate(13deg);
-  -ms-transform: rotate(13deg);
-  transform: rotate(13deg);
 }
 .head_names {
   font-family: lavanderia;
   text-shadow: -1px -1px 1px #000000;
   color: #000000;
   text-align: center;
-  margin-top: -30px;
   position: relative;
   opacity: 0.75;
-  font-size: 9rem;
-  font-size: 90px;
+}
+.head_title {
+  position: relative;
+}
+.head_title:before,
+.head_title:after {
+  zoom: 1;
+  position: absolute;
+  bottom: 20px;
+  content: "";
+  display: inline-block;
+  background-image: url(images/sprite.png);
+  background-position: 0px -565px;
+  width: 41px;
+  height: 36px;
+}
+.head_names {
+  font-family: lavanderia;
+  text-shadow: -1px -1px 1px #000000;
+  color: #000000;
+  text-align: center;
+  position: relative;
+  opacity: 0.75;
 }
 .head_names_first,
 .head_names_amp {
   font-weight: bold;
 }
-.head_names_left,
-.head_names_right {
-  position: relative;
-  display: inline-block;
-}
 .head_names_last {
   font-family: haymaker;
   position: absolute;
   bottom: 37px;
-  font-size: 2rem;
-  font-size: 20px;
-}
-.head_names_left .head_names_last {
-  right: 34px;
-}
-.head_names_right .head_names_last {
-  right: 22px;
 }
 #menu-menu {
   background-color: #c6d1cb;
   text-align: center;
   padding: 0;
-  width: 478.8px;
-  margin: 0 auto;
-  *zoom: 1;
-}
-#menu-menu:before,
-#menu-menu:after {
-  content: "";
-  display: table;
-}
-#menu-menu:after {
-  clear: both;
 }
 .menu-menu-container {
   padding: 3px 0;
@@ -301,6 +284,30 @@ p {
   *zoom: 1;
   border-top: 1px dashed #000000;
   border-bottom: 1px dashed #000000;
+}
+.menu-menu-container:before,
+.menu-menu-container:after {
+  content: "";
+  display: table;
+}
+.menu-menu-container:after {
+  clear: both;
+}
+.menu-menu-container:before,
+.menu-menu-container:after {
+  content: "";
+  display: table;
+}
+.menu-menu-container:after {
+  clear: both;
+}
+.menu-menu-container:before,
+.menu-menu-container:after {
+  content: "";
+  display: table;
+}
+.menu-menu-container:after {
+  clear: both;
 }
 .menu-menu-container:before,
 .menu-menu-container:after {
@@ -332,21 +339,9 @@ p {
   text-decoration: none;
   color: #1b141b;
 }
-.main_outer {
-  width: 570px;
-  margin: 0 auto;
-  *zoom: 1;
-}
-.main_outer:before,
-.main_outer:after {
-  content: "";
-  display: table;
-}
-.main_outer:after {
-  clear: both;
-}
 .main_mid {
   background: url('images/content-bg.png');
+  background-size: 200%;
   position: relative;
   text-shadow: 1px 1px 1px #000000;
   color: #d7dfd2;
@@ -358,17 +353,14 @@ p {
 .main_mid:before,
 .main_mid:after {
   content: '';
-  background: url('images/content-bg.png') -570px 0 no-repeat;
+  background: url('images/content-bg.png');
+  background-repeat: no-repeat;
+  background-size: 200%;
   height: 37px;
-  width: 570px;
-  display: block;
   position: absolute;
-}
-.main_mid:before {
-  top: -37px;
+  display: block;
 }
 .main_mid:after {
-  bottom: -37px;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
@@ -377,49 +369,27 @@ p {
   font-family: lavanderia;
   font-weight: normal;
   text-align: center;
-  font-size: 3.6rem;
-  font-size: 36px;
 }
 .main_mid p {
   text-align: center;
   color: #d7dfd2;
   font-family: metaserif;
-  padding: 0 87px;
-  font-size: 1.5rem;
-  font-size: 15px;
 }
 .main_mid .hotel-item,
 .main_mid .bot_box {
   position: relative;
   text-align: left;
-  background-position: -158px -406px;
   border-top: 1px solid #000000;
   border-bottom: 1px solid #000000;
-  width: 433.2px;
-  margin: 0 auto;
-  *zoom: 1;
-  background-image: url(images/sprite.png);
-}
-.main_mid .hotel-item:before,
-.main_mid .bot_box:before,
-.main_mid .hotel-item:after,
-.main_mid .bot_box:after {
-  content: "";
-  display: table;
 }
 .main_mid .hotel-item:after,
 .main_mid .bot_box:after {
-  clear: both;
-}
-.main_mid .hotel-item:after,
-.main_mid .bot_box:after {
-  content: '';
   position: absolute;
-  left: 40.2%;
-  bottom: -55px;
-  color: #13001f;
+  zoom: 1;
+  content: "";
+  display: inline-block;
   background-image: url(images/sprite.png);
-  background-position: -615px -532px;
+  background-position: 0px -216px;
   width: 98px;
   height: 22px;
 }
@@ -428,22 +398,27 @@ p {
   padding: 0;
   text-align: left;
   margin: 0;
-  font-size: 1.5rem;
-  font-size: 15px;
 }
 .main_mid .hotel-item h3,
 .main_mid .bot_box h3 {
   font-family: haymaker;
   margin-bottom: 13px;
-  margin-top: 20px;
   font-weight: normal;
-  font-size: 1.5rem;
-  font-size: 15px;
+}
+.main_mid .hotel-item h3:before,
+.main_mid .bot_box h3:before {
+  position: absolute;
+  zoom: 1;
+  content: "";
+  display: inline-block;
+  background-image: url(images/sprite.png);
+  background-position: 0px -888px;
+  width: 55px;
+  height: 54px;
 }
 .main_mid .hotel-item .item_descr,
 .main_mid .bot_box .item_descr {
-  padding-right: 100px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 .main_mid .hotel-item a,
 .main_mid .bot_box a {
@@ -474,7 +449,7 @@ p {
 }
 .main_mid .rsvp-attend-wrap {
   padding-top: 9px;
-  background-position: -2055px -1129px;
+  background-position: 79px -641px;
   margin-bottom: 20px;
   background-image: url(images/sprite.png);
 }
@@ -495,6 +470,30 @@ p {
   width: 131.1px;
   margin: 0 auto;
   *zoom: 1;
+}
+.main_mid .rsvp-btn-wrap:before,
+.main_mid .rsvp-btn-wrap:after {
+  content: "";
+  display: table;
+}
+.main_mid .rsvp-btn-wrap:after {
+  clear: both;
+}
+.main_mid .rsvp-btn-wrap:before,
+.main_mid .rsvp-btn-wrap:after {
+  content: "";
+  display: table;
+}
+.main_mid .rsvp-btn-wrap:after {
+  clear: both;
+}
+.main_mid .rsvp-btn-wrap:before,
+.main_mid .rsvp-btn-wrap:after {
+  content: "";
+  display: table;
+}
+.main_mid .rsvp-btn-wrap:after {
+  clear: both;
 }
 .main_mid .rsvp-btn-wrap:before,
 .main_mid .rsvp-btn-wrap:after {
@@ -576,20 +575,25 @@ p {
 .main_mid .rsvp-thankyou-message {
   margin-top: 0;
 }
-.main_mid .rsvpParagraph {
+.main_mid .rsvp-btn {
+  display: block;
+  margin: 0 auto;
+}
+.main_mid .rsvp-input-wrap {
   text-align: left;
   display: inline-block;
   margin-bottom: 18px;
   padding: 0;
+  width: 50%;
 }
-.main_mid .rsvpParagraph label {
+.main_mid .rsvp-input-wrap label {
   font-family: haymaker;
   text-transform: uppercase;
   margin-bottom: -12px;
   font-size: 1.2rem;
   font-size: 12px;
 }
-.main_mid .rsvpParagraph input {
+.main_mid .rsvp-input-wrap input {
   border-radius: 4px;
   border: none;
   margin-right: 15px;
@@ -600,22 +604,22 @@ p {
   -webkit-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
 }
-.main_mid .rsvpParagraph input:focus {
+.main_mid .rsvp-input-wrap input:focus {
   background-color: #ffffff;
   outline: 0;
 }
-.main_mid .rsvpParagraph input.btn-submit {
+.main_mid .rsvp-input-wrap input.btn-submit {
   background-color: transparent;
   padding-top: 8px;
   font-family: haymaker;
 }
-.main_mid .rsvpParagraph .custom-radio {
+.main_mid .rsvp-input-wrap .custom-radio {
   margin-right: 25px;
 }
-.main_mid .rsvpParagraph .custom-radio input {
+.main_mid .rsvp-input-wrap .custom-radio input {
   display: none;
 }
-.main_mid .rsvpParagraph .custom-radio label {
+.main_mid .rsvp-input-wrap .custom-radio label {
   font-family: haymaker;
   background-position: 0 0;
   cursor: pointer;
@@ -623,14 +627,14 @@ p {
   font-size: 1.2rem;
   font-size: 12px;
 }
-.main_mid .rsvpParagraph .custom-radio label.checked {
+.main_mid .rsvp-input-wrap .custom-radio label.checked {
   background-position: -59px -59px;
   background-image: url(images/sprite.png);
 }
-.main_mid .rsvpParagraph .rowRadio {
+.main_mid .rsvp-input-wrap .rowRadio {
   display: inline-block;
 }
-.main_mid .rsvpParagraph .input_styled {
+.main_mid .rsvp-input-wrap .input_styled {
   text-align: center;
   background-position: -1953px -983px;
   padding-top: 10px;
@@ -652,7 +656,7 @@ p {
   border: none;
   font-family: haymaker;
   background-image: url(images/sprite.png);
-  background-position: -881px -676px;
+  background-position: 0px -278px;
   width: 131px;
   height: 27px;
   font-size: 1.2rem;
@@ -672,17 +676,38 @@ p {
 .rowSubmit:after {
   clear: both;
 }
+.rowSubmit:before,
+.rowSubmit:after {
+  content: "";
+  display: table;
+}
+.rowSubmit:after {
+  clear: both;
+}
+.rowSubmit:before,
+.rowSubmit:after {
+  content: "";
+  display: table;
+}
+.rowSubmit:after {
+  clear: both;
+}
+.rowSubmit:before,
+.rowSubmit:after {
+  content: "";
+  display: table;
+}
+.rowSubmit:after {
+  clear: both;
+}
 .gbwedding-eatdrink {
   font-family: lavanderia;
   text-align: center;
   color: #000000;
   text-shadow: -1px -1px 1px #000000;
-  margin-top: -15px;
   position: relative;
   font-weight: bold;
   opacity: 0.75;
-  font-size: 3.3rem;
-  font-size: 33px;
 }
 .gbwedding-eatdrink:before,
 .gbwedding-eatdrink:after {
@@ -693,7 +718,7 @@ p {
   content: '';
   left: 95px;
   background-image: url(images/sprite.png);
-  background-position: -118px -118px;
+  background-position: 0px 0px;
   width: 47px;
   height: 8px;
 }
@@ -701,7 +726,7 @@ p {
   content: '';
   right: 90px;
   background-image: url(images/sprite.png);
-  background-position: -205px -166px;
+  background-position: 0px -48px;
   width: 48px;
   height: 10px;
 }
@@ -710,17 +735,17 @@ p {
   font-family: haymaker;
   text-align: center;
   padding-top: 3px;
-  margin-top: 25px;
   text-shadow: 0 0 1px #000000;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 2rem;
-  font-size: 20px;
-  opacity: 0.75;
+  transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
   background-image: url(images/sprite.png);
-  background-position: -1760px -1055px;
+  background-position: 0px -491px;
   width: 334px;
   height: 34px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.75;
 }
 .gbwedding-date {
   font-family: lincoln;
@@ -728,21 +753,19 @@ p {
   color: #000000;
   text-transform: uppercase;
   text-align: center;
-  padding-top: 60px;
-  margin-top: -40px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 3.9rem;
-  font-size: 39px;
   background-image: url(images/sprite.png);
-  background-position: -3060px -1377px;
+  background-position: 0px -1211px;
   width: 571px;
   height: 117px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.gbwedding-date span {
+  margin-top: 31px;
 }
 .gbwedding-rsvp {
   text-align: center;
   padding-top: 20px;
-  margin-top: -36px;
   position: relative;
   margin-left: auto;
   margin-right: auto;
@@ -753,7 +776,7 @@ p {
   position: absolute;
   top: 45px;
   background-image: url(images/sprite.png);
-  background-position: -753px -594px;
+  background-position: 0px -723px;
   width: 88px;
   height: 42px;
   -webkit-transition: all ease-in-out 0.4s;
@@ -786,7 +809,7 @@ p {
   display: inline-block;
   padding-top: 20px;
   background-image: url(images/sprite.png);
-  background-position: -1052px -743px;
+  background-position: 0px -982px;
   width: 137px;
   height: 62px;
   font-size: 2.1rem;
@@ -803,41 +826,33 @@ p {
   padding-top: 20px;
   border-top: 1px solid #000000;
   border-bottom: 1px solid #000000;
-  width: 406.97999999999996px;
-  margin: 0 auto;
-  *zoom: 1;
-}
-.gbwedding-page-bottom:before,
-.gbwedding-page-bottom:after {
-  content: "";
-  display: table;
-}
-.gbwedding-page-bottom:after {
-  clear: both;
 }
 .gbwedding-page-bottom h1 {
   font-family: haymaker;
   margin: 0;
-  font-size: 1.5rem;
-  font-size: 15px;
 }
 .gbwedding-page-bottom:after {
   content: '';
   position: absolute;
-  left: 40.2%;
   bottom: -55px;
   color: #13001f;
   background-image: url(images/sprite.png);
-  background-position: -615px -532px;
+  background-position: 0px -216px;
   width: 98px;
   height: 22px;
 }
-.gbwedding-page-bottom-wedding {
-  background-position: -504px -422px;
-  background-image: url(images/sprite.png);
-}
 .gbwedding-page-bottom-wedding h1 {
-  padding-left: 70px;
+  position: relative;
+}
+.gbwedding-page-bottom-wedding h1:before {
+  position: absolute;
+  zoom: 1;
+  background-image: url(images/sprite.png);
+  background-position: 0px -888px;
+  width: 55px;
+  height: 54px;
+  content: "";
+  display: inline-block;
 }
 .gbwedding-page-bottom-wedding .gbwedding-ribbon-btn-wrap {
   margin-bottom: 8px;
@@ -845,7 +860,7 @@ p {
 }
 .gbwedding-page-bottom-rsvp {
   padding-top: 0;
-  background-position: -283px -198px;
+  background-position: 8px -323px;
   background-image: url(images/sprite.png);
 }
 .gbwedding-page-bottom-rsvp p {
@@ -864,7 +879,7 @@ p {
 }
 .gbwedding-page-bottom-registry {
   padding-top: 0;
-  background-position: -345px -272px;
+  background-position: 19px -399px;
   background-image: url(images/sprite.png);
 }
 .gbwedding-page-bottom-registry p {
@@ -890,14 +905,13 @@ p {
   margin-top: -5px;
   color: #13001f;
   background-image: url(images/sprite.png);
-  background-position: -881px -676px;
+  background-position: 0px -278px;
   width: 131px;
   height: 27px;
   font-size: 1.2rem;
   font-size: 12px;
 }
 .gbwedding-ribbon-btn-wrap {
-  width: 90px;
   margin-bottom: 3px;
   margin-left: auto;
   margin-right: auto;
@@ -907,18 +921,6 @@ p {
   background-position: top center;
   background-repeat: no-repeat;
   position: relative;
-  height: 165px;
-  width: 440.61px;
-  margin: 0 auto;
-  *zoom: 1;
-}
-.gbwedding-image-wrap:before,
-.gbwedding-image-wrap:after {
-  content: "";
-  display: table;
-}
-.gbwedding-image-wrap:after {
-  clear: both;
 }
 .gbwedding-image-wrap:before,
 .gbwedding-image-wrap:after {
@@ -943,16 +945,11 @@ p {
 .gbwedding-image-wrap img {
   position: absolute;
   top: 2px;
-  left: 21px;
-  clip: rect(3px, 396px, 155px, 4px);
 }
 .gbwedding-contentbg h2,
 .gbwedding-contentbg h4 {
   font-family: metaserif;
   font-weight: normal;
-  padding: 0 80px;
-  font-size: 2.1rem;
-  font-size: 21px;
 }
 .gbwedding-contentbg h5 {
   font-family: metaserif;
@@ -966,19 +963,19 @@ p {
   opacity: .9;
 }
 .icon-invited-banner {
-  margin-left: auto;
-  margin-right: auto;
   background-image: url(images/sprite.png);
-  background-position: -2591px -1211px;
+  background-position: 0px -1368px;
   width: 429px;
   height: 126px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .icon-wedding-badge {
-  margin-top: -30px;
+  zoom: 1;
   margin-left: auto;
   margin-right: auto;
   background-image: url(images/sprite.png);
-  background-position: -1229px -845px;
+  background-position: 0px -1084px;
   width: 191px;
   height: 87px;
 }
@@ -1005,6 +1002,1068 @@ p {
 .char21,
 .char22 {
   vertical-align: super;
-  font-size: 2rem;
-  font-size: 20px;
+}
+body {
+  width: 100%;
+  *zoom: 1;
+}
+body:before,
+body:after {
+  content: "";
+  display: table;
+}
+body:after {
+  clear: both;
+}
+body:before,
+body:after {
+  content: "";
+  display: table;
+}
+body:after {
+  clear: both;
+}
+.x {
+  display: none;
+}
+@media only screen and (min-width: 320px) {
+  .main_outer {
+    width: 285px;
+    margin: 0 auto;
+    *zoom: 1;
+  }
+  .main_outer:before,
+  .main_outer:after {
+    content: "";
+    display: table;
+  }
+  .main_outer:after {
+    clear: both;
+  }
+  .main_outer:before,
+  .main_outer:after {
+    content: "";
+    display: table;
+  }
+  .main_outer:after {
+    clear: both;
+  }
+  .main_outer:before,
+  .main_outer:after {
+    content: "";
+    display: table;
+  }
+  .main_outer:after {
+    clear: both;
+  }
+  .main_outer:before,
+  .main_outer:after {
+    content: "";
+    display: table;
+  }
+  .main_outer:after {
+    clear: both;
+  }
+  #menu-menu {
+    width: 285px;
+    margin: 0 auto;
+    *zoom: 1;
+  }
+  #menu-menu:before,
+  #menu-menu:after {
+    content: "";
+    display: table;
+  }
+  #menu-menu:after {
+    clear: both;
+  }
+  #menu-menu:before,
+  #menu-menu:after {
+    content: "";
+    display: table;
+  }
+  #menu-menu:after {
+    clear: both;
+  }
+  #menu-menu:before,
+  #menu-menu:after {
+    content: "";
+    display: table;
+  }
+  #menu-menu:after {
+    clear: both;
+  }
+  #menu-menu:before,
+  #menu-menu:after {
+    content: "";
+    display: table;
+  }
+  #menu-menu:after {
+    clear: both;
+  }
+  .menu-menu-container {
+    width: 285px;
+    margin: 0 auto;
+    *zoom: 1;
+  }
+  .menu-menu-container:before,
+  .menu-menu-container:after {
+    content: "";
+    display: table;
+  }
+  .menu-menu-container:after {
+    clear: both;
+  }
+  .menu-menu-container:before,
+  .menu-menu-container:after {
+    content: "";
+    display: table;
+  }
+  .menu-menu-container:after {
+    clear: both;
+  }
+  .menu-menu-container:before,
+  .menu-menu-container:after {
+    content: "";
+    display: table;
+  }
+  .menu-menu-container:after {
+    clear: both;
+  }
+  .menu-menu-container:before,
+  .menu-menu-container:after {
+    content: "";
+    display: table;
+  }
+  .menu-menu-container:after {
+    clear: both;
+  }
+  .icon-invited-banner {
+    zoom: .67;
+    margin-top: -10px;
+    transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -webkit-transform: scale(0.7);
+  }
+  .icon-wedding-badge {
+    margin-top: -45px;
+    transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -webkit-transform: scale(0.7);
+  }
+  .head_names {
+    margin-top: -35px;
+    font-size: 6rem;
+    font-size: 60px;
+  }
+  .head_names_left,
+  .head_names_right {
+    position: relative;
+  }
+  .head_names_left {
+    margin-bottom: 15px;
+  }
+  .head_names_left .head_names_last {
+    right: 75px;
+  }
+  .head_names_right .head_names_last {
+    right: 75px;
+  }
+  .head_names_last {
+    bottom: 22px;
+    font-size: 1.5rem;
+    font-size: 15px;
+  }
+  .head_names_amp {
+    position: absolute;
+    top: 84px;
+    font-size: 3.9rem;
+    font-size: 39px;
+  }
+  .head_title {
+    width: 285px;
+    margin: 0 auto;
+    *zoom: 1;
+  }
+  .head_title:before,
+  .head_title:after {
+    content: "";
+    display: table;
+  }
+  .head_title:after {
+    clear: both;
+  }
+  .head_title:before,
+  .head_title:after {
+    content: "";
+    display: table;
+  }
+  .head_title:after {
+    clear: both;
+  }
+  .head_title:before,
+  .head_title:after {
+    content: "";
+    display: table;
+  }
+  .head_title:after {
+    clear: both;
+  }
+  .head_title:before,
+  .head_title:after {
+    content: "";
+    display: table;
+  }
+  .head_title:after {
+    clear: both;
+  }
+  .head_title :before,
+  .head_title :after {
+    transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -webkit-transform: scale(0.7);
+  }
+  .head_title:before {
+    left: 40px;
+    transform: rotate(-13deg) scale(0.5);
+    -ms-transform: rotate(-13deg) scale(0.5);
+    -webkit-transform: rotate(-13deg) scale(0.5);
+  }
+  .head_title:after {
+    right: 40px;
+    transform: rotate(13deg) scale(0.5);
+    -ms-transform: rotate(13deg) scale(0.5);
+    -webkit-transform: rotate(13deg) scale(0.5);
+  }
+  .main_mid:before,
+  .main_mid:after {
+    background-position: -285px 0;
+    width: 285px;
+    margin: 0 auto;
+    *zoom: 1;
+  }
+  .main_mid:before:before,
+  .main_mid:after:before,
+  .main_mid:before:after,
+  .main_mid:after:after {
+    content: "";
+    display: table;
+  }
+  .main_mid:before:after,
+  .main_mid:after:after {
+    clear: both;
+  }
+  .main_mid:before:before,
+  .main_mid:after:before,
+  .main_mid:before:after,
+  .main_mid:after:after {
+    content: "";
+    display: table;
+  }
+  .main_mid:before:after,
+  .main_mid:after:after {
+    clear: both;
+  }
+  .main_mid:before:before,
+  .main_mid:after:before,
+  .main_mid:before:after,
+  .main_mid:after:after {
+    content: "";
+    display: table;
+  }
+  .main_mid:before:after,
+  .main_mid:after:after {
+    clear: both;
+  }
+  .main_mid:before:before,
+  .main_mid:after:before,
+  .main_mid:before:after,
+  .main_mid:after:after {
+    content: "";
+    display: table;
+  }
+  .main_mid:before:after,
+  .main_mid:after:after {
+    clear: both;
+  }
+  .main_mid:before {
+    top: -18px;
+  }
+  .main_mid:after {
+    bottom: -18px;
+  }
+  .main_mid p {
+    padding: 0 33px;
+    font-size: 1.2rem;
+    font-size: 12px;
+  }
+  .main_mid h1 {
+    font-size: 2.6rem;
+    font-size: 26px;
+  }
+  .main_mid .hotel-item {
+    width: 239.4px;
+    margin: 0 auto;
+    *zoom: 1;
+  }
+  .main_mid .hotel-item:before,
+  .main_mid .hotel-item:after {
+    content: "";
+    display: table;
+  }
+  .main_mid .hotel-item:after {
+    clear: both;
+  }
+  .main_mid .hotel-item:before,
+  .main_mid .hotel-item:after {
+    content: "";
+    display: table;
+  }
+  .main_mid .hotel-item:after {
+    clear: both;
+  }
+  .main_mid .hotel-item:before,
+  .main_mid .hotel-item:after {
+    content: "";
+    display: table;
+  }
+  .main_mid .hotel-item:after {
+    clear: both;
+  }
+  .main_mid .hotel-item:before,
+  .main_mid .hotel-item:after {
+    content: "";
+    display: table;
+  }
+  .main_mid .hotel-item:after {
+    clear: both;
+  }
+  .main_mid .hotel-item h3 {
+    text-align: center;
+    margin-top: 38px;
+    font-size: 1.2rem;
+    font-size: 12px;
+  }
+  .main_mid .hotel-item h3 a {
+    display: block;
+  }
+  .main_mid .hotel-item h3:before {
+    right: 94px;
+    top: -8px;
+    transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+  }
+  .main_mid .hotel-item p {
+    font-size: 1.2rem;
+    font-size: 12px;
+  }
+  .main_mid .hotel-item .item_descr {
+    padding-right: 0;
+  }
+  .main_mid .hotel-item:after {
+    left: 29.2%;
+    bottom: -40px;
+    transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -webkit-transform: scale(0.7);
+  }
+  .gbwedding-rsvp:before,
+  .gbwedding-rsvp:after {
+    display: none;
+  }
+  .gbwedding-location {
+    margin-top: 10px;
+    zoom: .8;
+    font-size: 1.8rem;
+    font-size: 18px;
+  }
+  .gbwedding-eatdrink {
+    margin-top: -10px;
+    font-size: 2.1rem;
+    font-size: 21px;
+  }
+  .gbwedding-eatdrink:before,
+  .gbwedding-eatdrink:after {
+    display: none;
+  }
+  .gbwedding-date {
+    padding-top: 25px;
+    margin-top: -50px;
+    zoom: .5;
+    transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    font-size: 3.6rem;
+    font-size: 36px;
+  }
+  .gbwedding-rsvp {
+    margin-top: 0;
+  }
+  .gbwedding-image-wrap {
+    height: 94px;
+    width: 219.45000000000002px;
+    margin: 0 auto;
+    *zoom: 1;
+  }
+  .gbwedding-image-wrap:before,
+  .gbwedding-image-wrap:after {
+    content: "";
+    display: table;
+  }
+  .gbwedding-image-wrap:after {
+    clear: both;
+  }
+  .gbwedding-image-wrap:before,
+  .gbwedding-image-wrap:after {
+    content: "";
+    display: table;
+  }
+  .gbwedding-image-wrap:after {
+    clear: both;
+  }
+  .gbwedding-image-wrap:before,
+  .gbwedding-image-wrap:after {
+    content: "";
+    display: table;
+  }
+  .gbwedding-image-wrap:after {
+    clear: both;
+  }
+  .gbwedding-image-wrap:before,
+  .gbwedding-image-wrap:after {
+    content: "";
+    display: table;
+  }
+  .gbwedding-image-wrap:after {
+    clear: both;
+  }
+  .gbwedding-image-wrap img {
+    clip: rect(1px, 215px, 89px, 5px);
+    left: 0;
+    height: auto;
+    display: inline;
+    float: left;
+    width: 219.45000000000002px;
+    margin: 0 0px;
+  }
+  .gbwedding-image-wrap:before,
+  .gbwedding-image-wrap:after {
+    display: none;
+  }
+  .gbwedding-ribbon-btn-wrap {
+    width: 131px;
+  }
+  .gbwedding-page-bottom {
+    width: 239.4px;
+    margin: 0 auto;
+    *zoom: 1;
+  }
+  .gbwedding-page-bottom:before,
+  .gbwedding-page-bottom:after {
+    content: "";
+    display: table;
+  }
+  .gbwedding-page-bottom:after {
+    clear: both;
+  }
+  .gbwedding-page-bottom:before,
+  .gbwedding-page-bottom:after {
+    content: "";
+    display: table;
+  }
+  .gbwedding-page-bottom:after {
+    clear: both;
+  }
+  .gbwedding-page-bottom:before,
+  .gbwedding-page-bottom:after {
+    content: "";
+    display: table;
+  }
+  .gbwedding-page-bottom:after {
+    clear: both;
+  }
+  .gbwedding-page-bottom:before,
+  .gbwedding-page-bottom:after {
+    content: "";
+    display: table;
+  }
+  .gbwedding-page-bottom:after {
+    clear: both;
+  }
+  .gbwedding-page-bottom h1 {
+    padding-left: 0;
+    font-size: 1.2rem;
+    font-size: 12px;
+  }
+  .gbwedding-page-bottom:after {
+    left: 28.2%;
+  }
+  .gbwedding-page-bottom-wedding h1 {
+    padding-top: 25px;
+  }
+  .gbwedding-page-bottom-wedding h1:before {
+    transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    top: -25px;
+    left: 90px;
+  }
+  .gbwedding-contentbg h2,
+  .gbwedding-contentbg h4 {
+    padding: 0 35px;
+    font-size: 1.8rem;
+    font-size: 18px;
+  }
+  .char21,
+  .char22 {
+    font-size: 1.4rem;
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .main_outer {
+    width: 399px;
+    margin: 0 auto;
+    *zoom: 1;
+  }
+  .main_outer:before,
+  .main_outer:after {
+    content: "";
+    display: table;
+  }
+  .main_outer:after {
+    clear: both;
+  }
+  .main_outer:before,
+  .main_outer:after {
+    content: "";
+    display: table;
+  }
+  .main_outer:after {
+    clear: both;
+  }
+  .main_outer:before,
+  .main_outer:after {
+    content: "";
+    display: table;
+  }
+  .main_outer:after {
+    clear: both;
+  }
+  .main_outer:before,
+  .main_outer:after {
+    content: "";
+    display: table;
+  }
+  .main_outer:after {
+    clear: both;
+  }
+  .head_names_left .head_names_last {
+    right: 106px;
+  }
+  .head_names_right .head_names_last {
+    right: 106px;
+  }
+}
+@media only screen and (min-width: 640px) {
+  .main_outer {
+    width: 570px;
+    margin: 0 auto;
+    *zoom: 1;
+  }
+  .main_outer:before,
+  .main_outer:after {
+    content: "";
+    display: table;
+  }
+  .main_outer:after {
+    clear: both;
+  }
+  .main_outer:before,
+  .main_outer:after {
+    content: "";
+    display: table;
+  }
+  .main_outer:after {
+    clear: both;
+  }
+  .main_outer:before,
+  .main_outer:after {
+    content: "";
+    display: table;
+  }
+  .main_outer:after {
+    clear: both;
+  }
+  .main_outer:before,
+  .main_outer:after {
+    content: "";
+    display: table;
+  }
+  .main_outer:after {
+    clear: both;
+  }
+  #menu-menu {
+    width: 478.8px;
+    margin: 0 auto;
+    *zoom: 1;
+  }
+  #menu-menu:before,
+  #menu-menu:after {
+    content: "";
+    display: table;
+  }
+  #menu-menu:after {
+    clear: both;
+  }
+  #menu-menu:before,
+  #menu-menu:after {
+    content: "";
+    display: table;
+  }
+  #menu-menu:after {
+    clear: both;
+  }
+  #menu-menu:before,
+  #menu-menu:after {
+    content: "";
+    display: table;
+  }
+  #menu-menu:after {
+    clear: both;
+  }
+  #menu-menu:before,
+  #menu-menu:after {
+    content: "";
+    display: table;
+  }
+  #menu-menu:after {
+    clear: both;
+  }
+  .menu-menu-container {
+    width: 478.8px;
+    margin: 0 auto;
+    *zoom: 1;
+  }
+  .menu-menu-container:before,
+  .menu-menu-container:after {
+    content: "";
+    display: table;
+  }
+  .menu-menu-container:after {
+    clear: both;
+  }
+  .menu-menu-container:before,
+  .menu-menu-container:after {
+    content: "";
+    display: table;
+  }
+  .menu-menu-container:after {
+    clear: both;
+  }
+  .menu-menu-container:before,
+  .menu-menu-container:after {
+    content: "";
+    display: table;
+  }
+  .menu-menu-container:after {
+    clear: both;
+  }
+  .menu-menu-container:before,
+  .menu-menu-container:after {
+    content: "";
+    display: table;
+  }
+  .menu-menu-container:after {
+    clear: both;
+  }
+  .icon-invited-banner {
+    zoom: 1;
+    margin-top: 20px;
+    display: block;
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+  .icon-wedding-badge {
+    display: block;
+    margin-top: -30px;
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+  .head_names {
+    margin-top: -30px;
+    font-size: 9rem;
+    font-size: 90px;
+  }
+  .head_names_left,
+  .head_names_right {
+    position: relative;
+    display: inline-block;
+  }
+  .head_names_last {
+    bottom: 37px;
+    font-size: 2rem;
+    font-size: 20px;
+  }
+  .head_names_left {
+    margin-bottom: 0;
+  }
+  .head_names_left .head_names_last {
+    right: 34px;
+  }
+  .head_names_right .head_names_last {
+    right: 22px;
+  }
+  .head_names_amp {
+    position: relative;
+    top: 0;
+    font-size: 9rem;
+    font-size: 90px;
+  }
+  .head_title {
+    width: 570px;
+    margin: 0 auto;
+    *zoom: 1;
+  }
+  .head_title:before,
+  .head_title:after {
+    content: "";
+    display: table;
+  }
+  .head_title:after {
+    clear: both;
+  }
+  .head_title:before,
+  .head_title:after {
+    content: "";
+    display: table;
+  }
+  .head_title:after {
+    clear: both;
+  }
+  .head_title:before,
+  .head_title:after {
+    content: "";
+    display: table;
+  }
+  .head_title:after {
+    clear: both;
+  }
+  .head_title:before,
+  .head_title:after {
+    content: "";
+    display: table;
+  }
+  .head_title:after {
+    clear: both;
+  }
+  .head_title :before,
+  .head_title :after {
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+  .head_title:before {
+    left: 134px;
+    transform: rotate(-13deg) scale(1);
+    -ms-transform: rotate(-13deg) scale(1);
+    -webkit-transform: rotate(-13deg) scale(1);
+  }
+  .head_title:after {
+    right: 134px;
+    transform: rotate(13deg) scale(1);
+    -ms-transform: rotate(13deg) scale(1);
+    -webkit-transform: rotate(13deg) scale(1);
+  }
+  .main_mid:before,
+  .main_mid:after {
+    background-position: -570px 0;
+    width: 570px;
+    margin: 0 auto;
+    *zoom: 1;
+  }
+  .main_mid:before:before,
+  .main_mid:after:before,
+  .main_mid:before:after,
+  .main_mid:after:after {
+    content: "";
+    display: table;
+  }
+  .main_mid:before:after,
+  .main_mid:after:after {
+    clear: both;
+  }
+  .main_mid:before:before,
+  .main_mid:after:before,
+  .main_mid:before:after,
+  .main_mid:after:after {
+    content: "";
+    display: table;
+  }
+  .main_mid:before:after,
+  .main_mid:after:after {
+    clear: both;
+  }
+  .main_mid:before:before,
+  .main_mid:after:before,
+  .main_mid:before:after,
+  .main_mid:after:after {
+    content: "";
+    display: table;
+  }
+  .main_mid:before:after,
+  .main_mid:after:after {
+    clear: both;
+  }
+  .main_mid:before:before,
+  .main_mid:after:before,
+  .main_mid:before:after,
+  .main_mid:after:after {
+    content: "";
+    display: table;
+  }
+  .main_mid:before:after,
+  .main_mid:after:after {
+    clear: both;
+  }
+  .main_mid:before {
+    top: -37px;
+  }
+  .main_mid:after {
+    bottom: -37px;
+  }
+  .main_mid h1 {
+    font-size: 3.9rem;
+    font-size: 39px;
+  }
+  .main_mid p {
+    padding: 0 87px;
+    font-size: 1.5rem;
+    font-size: 15px;
+  }
+  .main_mid .hotel-item {
+    width: 433.2px;
+    margin: 0 auto;
+    *zoom: 1;
+  }
+  .main_mid .hotel-item:before,
+  .main_mid .hotel-item:after {
+    content: "";
+    display: table;
+  }
+  .main_mid .hotel-item:after {
+    clear: both;
+  }
+  .main_mid .hotel-item:before,
+  .main_mid .hotel-item:after {
+    content: "";
+    display: table;
+  }
+  .main_mid .hotel-item:after {
+    clear: both;
+  }
+  .main_mid .hotel-item:before,
+  .main_mid .hotel-item:after {
+    content: "";
+    display: table;
+  }
+  .main_mid .hotel-item:after {
+    clear: both;
+  }
+  .main_mid .hotel-item:before,
+  .main_mid .hotel-item:after {
+    content: "";
+    display: table;
+  }
+  .main_mid .hotel-item:after {
+    clear: both;
+  }
+  .main_mid .hotel-item h3 {
+    text-align: left;
+    position: relative;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-size: 15px;
+  }
+  .main_mid .hotel-item h3 a {
+    display: inline;
+  }
+  .main_mid .hotel-item h3:before {
+    right: 35px;
+    top: 25px;
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+  .main_mid .hotel-item p {
+    font-size: 1.5rem;
+    font-size: 15px;
+  }
+  .main_mid .hotel-item .item_descr {
+    padding-right: 100px;
+  }
+  .main_mid .hotel-item:after {
+    left: 40.2%;
+    bottom: -55px;
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+  .gbwedding-rsvp:before,
+  .gbwedding-rsvp:after {
+    display: block;
+  }
+  .gbwedding-location {
+    margin-top: 25px;
+    zoom: 1;
+    font-size: 2rem;
+    font-size: 20px;
+  }
+  .gbwedding-eatdrink {
+    margin-top: -15px;
+    font-size: 3.3rem;
+    font-size: 33px;
+  }
+  .gbwedding-eatdrink:before,
+  .gbwedding-eatdrink:after {
+    display: block;
+  }
+  .gbwedding-date {
+    padding-top: 30px;
+    margin-top: -40px;
+    zoom: 1;
+    font-size: 3.9rem;
+    font-size: 39px;
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+  .gbwedding-rsvp {
+    margin-top: -20px;
+  }
+  .gbwedding-image-wrap {
+    height: 165px;
+    width: 440.61px;
+    margin: 0 auto;
+    *zoom: 1;
+  }
+  .gbwedding-image-wrap:before,
+  .gbwedding-image-wrap:after {
+    content: "";
+    display: table;
+  }
+  .gbwedding-image-wrap:after {
+    clear: both;
+  }
+  .gbwedding-image-wrap:before,
+  .gbwedding-image-wrap:after {
+    content: "";
+    display: table;
+  }
+  .gbwedding-image-wrap:after {
+    clear: both;
+  }
+  .gbwedding-image-wrap:before,
+  .gbwedding-image-wrap:after {
+    content: "";
+    display: table;
+  }
+  .gbwedding-image-wrap:after {
+    clear: both;
+  }
+  .gbwedding-image-wrap:before,
+  .gbwedding-image-wrap:after {
+    content: "";
+    display: table;
+  }
+  .gbwedding-image-wrap:after {
+    clear: both;
+  }
+  .gbwedding-image-wrap img {
+    left: 21px;
+    clip: rect(3px, 396px, 155px, 4px);
+    display: inline;
+    float: left;
+    width: 404.7px;
+    margin: 0 0px;
+  }
+  .gbwedding-image-wrap:before,
+  .gbwedding-image-wrap:after {
+    display: block;
+  }
+  .gbwedding-ribbon-btn-wrap {
+    width: 90px;
+  }
+  .gbwedding-page-bottom {
+    width: 406.97999999999996px;
+    margin: 0 auto;
+    *zoom: 1;
+  }
+  .gbwedding-page-bottom:before,
+  .gbwedding-page-bottom:after {
+    content: "";
+    display: table;
+  }
+  .gbwedding-page-bottom:after {
+    clear: both;
+  }
+  .gbwedding-page-bottom:before,
+  .gbwedding-page-bottom:after {
+    content: "";
+    display: table;
+  }
+  .gbwedding-page-bottom:after {
+    clear: both;
+  }
+  .gbwedding-page-bottom:before,
+  .gbwedding-page-bottom:after {
+    content: "";
+    display: table;
+  }
+  .gbwedding-page-bottom:after {
+    clear: both;
+  }
+  .gbwedding-page-bottom:before,
+  .gbwedding-page-bottom:after {
+    content: "";
+    display: table;
+  }
+  .gbwedding-page-bottom:after {
+    clear: both;
+  }
+  .gbwedding-page-bottom h1 {
+    font-size: 1.5rem;
+    font-size: 15px;
+  }
+  .gbwedding-page-bottom:after {
+    left: 40.2%;
+  }
+  .gbwedding-page-bottom-wedding h1 {
+    padding-top: 0;
+    padding-left: 50px;
+  }
+  .gbwedding-page-bottom-wedding h1:before {
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    top: -4px;
+    left: 15px;
+  }
+  .gbwedding-contentbg h2,
+  .gbwedding-contentbg h4 {
+    padding: 0 80px;
+    font-size: 2.1rem;
+    font-size: 21px;
+  }
+  .char21,
+  .char22 {
+    font-size: 2rem;
+    font-size: 20px;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  
 }
