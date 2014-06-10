@@ -107,7 +107,6 @@
 		}
 
 		p {
-			padding: 0 33px;
 			.font-size(@base-font-size);
 		}
 
@@ -116,7 +115,7 @@
 		}
 
 		.hotel-item {
-			.row(4.2);
+			.row(3.55);
 
 			h3 {
 				text-align: center;
@@ -128,7 +127,7 @@
 				}
 
 				&:before {
-					right: 94px;
+					right: 73px;
 					top: -8px;
 					.transform(scale(.5));
 				}
@@ -143,9 +142,55 @@
 			}
 
 			&:after {
-				left: 39% - 9.8;
+				left: 38% - 9.8;
 				bottom: -40px;
 				.transform(scale(.7));
+			}
+		}
+
+		#rsvp {
+
+				&Plugin {
+				text-align: left;
+			}
+		}
+
+		.rsvp {
+
+			&-btn {
+				margin-left: 33px;
+			}
+
+			&-already-note {
+				.font-size(@base-size-sm1);
+			}
+
+			&-attend {
+
+				&-wrap {
+					background-image: none;
+				}
+
+				&-label {
+					margin-bottom: 8px;
+				}
+			}
+
+			&-associated {
+
+				&-attending-question {
+					.font-size(@base-size-sm);
+				}
+			}
+
+			&-first-name {
+				.font-size(@base-size-med);
+			}
+
+			&-more {
+				.rsvpParagraph {
+					.font-size(@base-size-sm);
+				}
 			}
 		}
 	}
@@ -218,7 +263,7 @@
 
 		&-page-bottom {
 		
-			.row(4.2);
+			.row(3.55);
 		
 			h1 {
 				padding-left: 0;
@@ -226,7 +271,8 @@
 			}
 
 			&:after {
-				left: 38% - 9.8;
+				.transform(scale(.7));
+				left: 35% - 9.8;
 			}
 
 			&-wedding {
@@ -238,7 +284,41 @@
 					&:before {
 						.transform(scale(.5));
 						top: -25px;
-						left: 90px;
+						left: 78px;
+					}
+				}
+			}
+
+			&-rsvp {
+
+				p {
+
+					text-align: center;
+					padding-left: 0;
+					margin-top: 35px;
+
+					&:before {
+						zoom: 1;
+						top: -33px;
+						left: 85px;
+						.transform(scale(.7));
+					}
+				}
+			}
+
+			&-registry {
+
+				p {
+					
+					margin-top: 41px;
+					padding-left: 0;
+					text-align: center;
+
+					&:before {
+
+						top: -36px;
+						left: 87px;
+						.transform(scale(.7));
 					}
 				}
 			}
@@ -248,9 +328,27 @@
 			
 			h2,
 			h4 {
-				padding: 0 35px;
 				.font-size(@base-size-h5);
 			}
+
+			p {
+				
+			}
+
+			h5 {
+
+				.font-size(@base-size-sm);
+			}
+		}
+	}
+
+	.registry {
+
+		&-shop-wrap {
+			display: block;
+			padding: 13px 27px;
+			margin: 30px auto;
+			width: 100% / 2.5 - 1px;
 		}
 	}
 
@@ -400,7 +498,7 @@
 		}
 
 		p {
-			padding: 0 87px;
+			
 			.font-size(@base-size-sm);
 		}
 
@@ -436,6 +534,52 @@
 				left: 50% - 9.8;
 				bottom: -55px;
 				.transform(scale(1));
+			}
+		}
+
+		#rsvp {
+
+				&Plugin {
+				text-align: center;
+			}
+		}
+
+		.rsvp {
+
+			&-btn {
+				margin:0 auto;
+			}
+
+			&-already-note {
+				.font-size(@base-size-h4);
+			}
+
+			&-attend {
+
+				&-wrap {
+					.sprite-image(@radio-bg);
+				}
+
+				&-label {
+					margin-bottom: 30px;
+				}
+			}
+
+			&-associated {
+
+				&-attending-question {
+					.font-size(@base-size-h5);
+				}
+			}
+
+			&-first-name {
+				.font-size(@base-size-lg);
+			}
+
+			&-more {
+				.rsvpParagraph {
+					.font-size(@base-size-h4);
+				}
 			}
 		}
 	}
@@ -508,13 +652,14 @@
 
 		&-page-bottom {
 			
-			.row(7.14);
+			.row(7.65);
 
 			h1 {
 				.font-size(@base-size-sm);
 			}
 
 			&:after {
+				.transform(scale(1));
 				left: 50% - 9.8;
 			}
 
@@ -533,6 +678,40 @@
 					}
 				}
 			}
+
+			&-rsvp {
+
+				p {
+
+					text-align: left;
+					padding-left: 60px;
+					margin-top: 15px;
+
+					&:before {
+						zoom: 1;
+						top: 4px;
+						left: 15px;
+						.transform(scale(1));
+					}
+				}
+			}
+
+			&-registry {
+
+				p {
+					
+					padding-left: 40px;
+					margin-top: 15px;
+					text-align: left;
+
+					&:before {
+						
+						top: -6px;
+						left: 0;
+						.transform(scale(1));
+					}
+				}
+			}
 		}
 
 		&-contentbg {
@@ -542,6 +721,28 @@
 				padding: 0 80px;
 				.font-size(@base-size-h4);
 			}
+
+			p {
+				
+			}
+
+			h5 {
+				padding: 0 95px;
+				.font-size(@base-size-h5);
+			}
+		}
+	}
+
+	.registry {
+
+		&-shop-wrap {
+			display: inline-block;
+			padding: 2px 2px;
+			border-radius: 100%;
+			width: 100% / 3 - 12px;
+			margin-bottom: 60px;
+			margin-left: 10px;
+			margin-right: 10px;
 		}
 	}
 

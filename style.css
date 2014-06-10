@@ -228,7 +228,8 @@ body {
   font-family: Verdana, Arial, sans-serif;
 }
 p,
-h3 {
+h3,
+h1 {
   line-height: 1.5em;
   margin-top: auto;
 }
@@ -425,9 +426,6 @@ h3 {
   text-decoration: none;
   color: #da6055;
 }
-.main_mid #rsvp {
-  padding-left: 22px;
-}
 .main_mid #rsvpForm {
   margin-bottom: 25px;
 }
@@ -443,15 +441,11 @@ h3 {
 }
 .main_mid .rsvp-more .rsvpParagraph {
   text-align: center;
-  padding: 0 65px;
-  font-size: 2.1rem;
-  font-size: 21px;
 }
 .main_mid .rsvp-attend-wrap {
   padding-top: 9px;
-  background-position: 79px -641px;
+  background-position: 37px -641px;
   margin-bottom: 20px;
-  background-image: url(images/sprite.png);
 }
 .main_mid .rsvp-attend-label {
   font-family: haymaker;
@@ -506,16 +500,12 @@ h3 {
 .main_mid .rsvp-first-name {
   font-family: lavanderia;
   margin-bottom: 0;
-  font-size: 3.9rem;
-  font-size: 39px;
 }
 .main_mid .rsvp-associated-note {
   margin-bottom: 20px;
 }
 .main_mid .rsvp-associated-attending-question {
   margin-bottom: 0;
-  font-size: 1.8rem;
-  font-size: 18px;
 }
 .main_mid .rsvp-associated-still-name {
   color: #da6055;
@@ -530,6 +520,7 @@ h3 {
 }
 .main_mid .rsvp-already-registered-name {
   color: #da6055;
+  display: block;
 }
 .main_mid .rsvp-error {
   color: red;
@@ -537,6 +528,7 @@ h3 {
   text-align: left;
   position: relative;
   margin-bottom: 20px;
+  text-align: center;
   font-size: 1.4rem;
   font-size: 14px;
   /*&:before {
@@ -561,10 +553,6 @@ h3 {
 .main_mid .rsvp-suggested-name {
   display: block;
 }
-.main_mid .rsvp-already-note {
-  font-size: 2.1rem;
-  font-size: 21px;
-}
 .main_mid .rsvp-question-heading {
   margin-bottom: 10px;
 }
@@ -577,7 +565,6 @@ h3 {
 }
 .main_mid .rsvp-btn {
   display: block;
-  margin: 0 auto;
 }
 .main_mid .rsvp-input-wrap {
   text-align: left;
@@ -860,18 +847,25 @@ h3 {
 }
 .gbwedding-page-bottom-rsvp {
   padding-top: 0;
-  background-position: 8px -323px;
-  background-image: url(images/sprite.png);
 }
 .gbwedding-page-bottom-rsvp p {
   text-align: left;
   font-family: haymaker;
-  padding-right: 0;
-  padding-left: 50px;
-  padding-top: 28px;
-  margin-bottom: 28px;
+  position: relative;
   font-size: 1.2rem;
   font-size: 12px;
+}
+.gbwedding-page-bottom-rsvp p:before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  background-image: url(images/sprite.png);
+  background-position: 0px -345px;
+  width: 33px;
+  height: 33px;
+}
+.gbwedding-page-bottom-rsvp p a {
+  display: block;
 }
 .gbwedding-page-bottom-rsvp a {
   text-decoration: none;
@@ -879,18 +873,23 @@ h3 {
 }
 .gbwedding-page-bottom-registry {
   padding-top: 0;
-  background-position: 19px -399px;
-  background-image: url(images/sprite.png);
 }
 .gbwedding-page-bottom-registry p {
   text-align: left;
   font-family: haymaker;
-  padding-right: 0;
-  padding-left: 75px;
-  padding-top: 26px;
-  margin-bottom: 28px;
+  position: relative;
   font-size: 1.2rem;
   font-size: 12px;
+}
+.gbwedding-page-bottom-registry p:before {
+  zoom: 1;
+  position: absolute;
+  background-image: url(images/sprite.png);
+  background-position: 0px -418px;
+  width: 33px;
+  height: 33px;
+  content: "";
+  display: inline-block;
 }
 .gbwedding-page-bottom-registry a {
   text-decoration: none;
@@ -946,6 +945,9 @@ h3 {
   position: absolute;
   top: 2px;
 }
+.gbwedding-contentbg {
+  padding: 0 40px;
+}
 .gbwedding-contentbg h2,
 .gbwedding-contentbg h4 {
   font-family: metaserif;
@@ -954,9 +956,6 @@ h3 {
 .gbwedding-contentbg h5 {
   font-family: metaserif;
   font-weight: normal;
-  padding: 0 95px;
-  font-size: 1.8rem;
-  font-size: 18px;
 }
 .icon {
   text-indent: -9999px;
@@ -985,16 +984,10 @@ h3 {
 }
 .registry-shop-wrap {
   background-color: #d7dfd2;
-  padding: 6px 0;
-  border-radius: 100%;
   height: 102px;
-  width: 21.333333333333336%;
   position: relative;
-  display: inline-block;
-  margin-bottom: 60px;
-  margin-left: 10px;
-  margin-right: 10px;
   vertical-align: top;
+  border-radius: 100%;
 }
 .registry-shop-wrap .row {
   padding-top: 40px;
@@ -1293,7 +1286,6 @@ body:after {
     bottom: -18px;
   }
   .main_mid p {
-    padding: 0 33px;
     font-size: 1.2rem;
     font-size: 12px;
   }
@@ -1302,7 +1294,7 @@ body:after {
     font-size: 26px;
   }
   .main_mid .hotel-item {
-    width: 239.4px;
+    width: 202.35px;
     margin: 0 auto;
     *zoom: 1;
   }
@@ -1348,7 +1340,7 @@ body:after {
     display: block;
   }
   .main_mid .hotel-item h3:before {
-    right: 94px;
+    right: 73px;
     top: -8px;
     transform: scale(0.5);
     -ms-transform: scale(0.5);
@@ -1362,11 +1354,39 @@ body:after {
     padding-right: 0;
   }
   .main_mid .hotel-item:after {
-    left: 29.2%;
+    left: 28.2%;
     bottom: -40px;
     transform: scale(0.7);
     -ms-transform: scale(0.7);
     -webkit-transform: scale(0.7);
+  }
+  .main_mid #rsvpPlugin {
+    text-align: left;
+  }
+  .main_mid .rsvp-btn {
+    margin-left: 33px;
+  }
+  .main_mid .rsvp-already-note {
+    font-size: 1.4rem;
+    font-size: 14px;
+  }
+  .main_mid .rsvp-attend-wrap {
+    background-image: none;
+  }
+  .main_mid .rsvp-attend-label {
+    margin-bottom: 8px;
+  }
+  .main_mid .rsvp-associated-attending-question {
+    font-size: 1.5rem;
+    font-size: 15px;
+  }
+  .main_mid .rsvp-first-name {
+    font-size: 3.3rem;
+    font-size: 33px;
+  }
+  .main_mid .rsvp-more .rsvpParagraph {
+    font-size: 1.5rem;
+    font-size: 15px;
   }
   .gbwedding-rsvp:before,
   .gbwedding-rsvp:after {
@@ -1455,7 +1475,7 @@ body:after {
     width: 131px;
   }
   .gbwedding-page-bottom {
-    width: 239.4px;
+    width: 202.35px;
     margin: 0 auto;
     *zoom: 1;
   }
@@ -1497,7 +1517,10 @@ body:after {
     font-size: 12px;
   }
   .gbwedding-page-bottom:after {
-    left: 28.2%;
+    transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -webkit-transform: scale(0.7);
+    left: 25.2%;
   }
   .gbwedding-page-bottom-wedding h1 {
     padding-top: 25px;
@@ -1507,13 +1530,47 @@ body:after {
     -ms-transform: scale(0.5);
     -webkit-transform: scale(0.5);
     top: -25px;
-    left: 90px;
+    left: 78px;
+  }
+  .gbwedding-page-bottom-rsvp p {
+    text-align: center;
+    padding-left: 0;
+    margin-top: 35px;
+  }
+  .gbwedding-page-bottom-rsvp p:before {
+    zoom: 1;
+    top: -33px;
+    left: 85px;
+    transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -webkit-transform: scale(0.7);
+  }
+  .gbwedding-page-bottom-registry p {
+    margin-top: 41px;
+    padding-left: 0;
+    text-align: center;
+  }
+  .gbwedding-page-bottom-registry p:before {
+    top: -36px;
+    left: 87px;
+    transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -webkit-transform: scale(0.7);
   }
   .gbwedding-contentbg h2,
   .gbwedding-contentbg h4 {
-    padding: 0 35px;
     font-size: 1.8rem;
     font-size: 18px;
+  }
+  .gbwedding-contentbg h5 {
+    font-size: 1.5rem;
+    font-size: 15px;
+  }
+  .registry-shop-wrap {
+    display: block;
+    padding: 13px 27px;
+    margin: 30px auto;
+    width: 39%;
   }
   .char21,
   .char22 {
@@ -1840,7 +1897,6 @@ body:after {
     font-size: 39px;
   }
   .main_mid p {
-    padding: 0 87px;
     font-size: 1.5rem;
     font-size: 15px;
   }
@@ -1911,6 +1967,34 @@ body:after {
     transform: scale(1);
     -ms-transform: scale(1);
     -webkit-transform: scale(1);
+  }
+  .main_mid #rsvpPlugin {
+    text-align: center;
+  }
+  .main_mid .rsvp-btn {
+    margin: 0 auto;
+  }
+  .main_mid .rsvp-already-note {
+    font-size: 2.1rem;
+    font-size: 21px;
+  }
+  .main_mid .rsvp-attend-wrap {
+    background-image: url(images/sprite.png);
+  }
+  .main_mid .rsvp-attend-label {
+    margin-bottom: 30px;
+  }
+  .main_mid .rsvp-associated-attending-question {
+    font-size: 1.8rem;
+    font-size: 18px;
+  }
+  .main_mid .rsvp-first-name {
+    font-size: 3.9rem;
+    font-size: 39px;
+  }
+  .main_mid .rsvp-more .rsvpParagraph {
+    font-size: 2.1rem;
+    font-size: 21px;
   }
   .gbwedding-rsvp:before,
   .gbwedding-rsvp:after {
@@ -1998,7 +2082,7 @@ body:after {
     width: 90px;
   }
   .gbwedding-page-bottom {
-    width: 406.97999999999996px;
+    width: 436.05px;
     margin: 0 auto;
     *zoom: 1;
   }
@@ -2039,6 +2123,9 @@ body:after {
     font-size: 15px;
   }
   .gbwedding-page-bottom:after {
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
     left: 40.2%;
   }
   .gbwedding-page-bottom-wedding h1 {
@@ -2052,11 +2139,50 @@ body:after {
     top: -4px;
     left: 15px;
   }
+  .gbwedding-page-bottom-rsvp p {
+    text-align: left;
+    padding-left: 60px;
+    margin-top: 15px;
+  }
+  .gbwedding-page-bottom-rsvp p:before {
+    zoom: 1;
+    top: 4px;
+    left: 15px;
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+  .gbwedding-page-bottom-registry p {
+    padding-left: 40px;
+    margin-top: 15px;
+    text-align: left;
+  }
+  .gbwedding-page-bottom-registry p:before {
+    top: -6px;
+    left: 0;
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+  }
   .gbwedding-contentbg h2,
   .gbwedding-contentbg h4 {
     padding: 0 80px;
     font-size: 2.1rem;
     font-size: 21px;
+  }
+  .gbwedding-contentbg h5 {
+    padding: 0 95px;
+    font-size: 1.8rem;
+    font-size: 18px;
+  }
+  .registry-shop-wrap {
+    display: inline-block;
+    padding: 2px 2px;
+    border-radius: 100%;
+    width: 21.333333333333336%;
+    margin-bottom: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
   .char21,
   .char22 {
