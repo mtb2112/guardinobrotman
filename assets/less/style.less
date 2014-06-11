@@ -40,6 +40,17 @@ h1 {
 		text-align: center;
 		position: relative;
 		.fade;
+
+		&_first,
+		&_amp {
+			font-weight: bold;
+		}
+
+		&_last {
+			font-family: @sub-heading-font;
+			position: absolute;
+			bottom: 37px;
+		}
 	}
 
 	&_title {
@@ -54,53 +65,25 @@ h1 {
 			.sprite(@heart);
 		}
 	}
-
-	&_names {
-		font-family: @header-font;
-		text-shadow: -1px -1px 1px @black;
-		color: multiply(@heading-color, @black);
-		text-align: center;
-		position: relative;
-		.fade;
-
-
-		&_first,
-		&_amp {
-			font-weight: bold;
-		}
-
-		&_last {
-			font-family: @sub-heading-font;
-			position: absolute;
-			bottom: 37px;
-		}
-	}
 }
 
 #menu-menu {
-	background-color: @menu-bg-color;
 	text-align: center;
 	padding: 0;
 }
 
-.menu-menu-container {
-	padding: 3px 0;
-	.row(8.4);
-	.bordered(1px, dashed, @black);
-}
+.menu {
 
-.current_page_item {
-	background-color: rgba(255, 255, 255, .5);
-}
+	&-wrap {
+		background-color: @menu-bg-color;
+	}
 
-.menu-item {
+	&-item {
 		list-style: none;
-		display: inline-block;
 		text-transform: uppercase;
 		text-decoration: none;
 		font-family: @menu-font;
-		padding: 10px 15px;
-		.font-size(@base-size-sm1);
+		cursor: pointer;
 		.transition(all, ease-in, .2s);
 
 		&:hover {
@@ -113,8 +96,30 @@ h1 {
 		}
 	}
 
-.main_outer {
-	
+	&-mb-link {
+		padding: 10px 5px;
+		text-decoration: none;
+		font-family: @sub-heading-font;
+		color: @menu-link-color;
+		position: relative;
+		background-color: #93afa0;
+		text-shadow: 0 0 1px @black;
+		.font-size(@base-size-h4);
+
+		&:after {
+			width: 20px;
+			height: 20px;
+			background-image: url(images/nav-icon.png);
+			position: absolute;
+			right: 12px;
+			top: 8px;
+			.inject();
+		}
+	}
+}
+
+.current_page_item {
+	background-color: rgba(255, 255, 255, .5);
 }
 
 .main_mid {
@@ -511,29 +516,14 @@ h1 {
 				position: absolute;
 				top: 45px;
 				.sprite(@finger);
-				.transition(all, ease-in-out, .4s);
 			}
 
-			&:before {
-				left: 60px;
-			}
 
 			&:after {
-				right: 60px;
 				filter: FlipH;
 				-ms-filter: "FlipH";
 				.scaleX();
 			}
-
-		&:hover {
-			&:before {
-				left: 100px;
-			}
-
-			&:after {
-				right: 100px;
-			}
-		}
 	}
 
 	&-rsvp-button {

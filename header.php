@@ -18,7 +18,7 @@
     <?php tfuse_meta(); ?>
     <link href="http://fonts.googleapis.com/css?family=Copse|Six+Caps|Source+Sans+Pro:400,700" rel="stylesheet">
     <!-- Mobile viewport optimized: h5bp.com/viewport -->
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' /> 
     <!-- favicon.ico and apple-touch-icon.png -->
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57-iphone.png">
@@ -64,9 +64,11 @@
                 </div><!-- header -->
 
             <!-- .topmenu -->
-            <div class="topmenu_line_top"></div>
-            <?php  tfuse_menu('default');  ?>
-            <div class="topmenu_line_bot"></div><!--/ .topmenu -->
+            <div class="menu-wrap">
+                <?php  tfuse_menu('default');  ?>
+                <a href="#" class="menu-mb-link">Menu</a>
+            </div>
+
             <div class="<?php if( !is_front_page()) : ?>main_mid<?php endif; ?>">
             <?php
                 global $is_tf_blog_page;
